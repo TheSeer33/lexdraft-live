@@ -1,0 +1,2583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<link rel="canonical" href="https://aivistaglobal.com"/>
+<title>LexDraft — Legal Documents Done Right. $27.</title>
+<meta name="description" content="Professional legal documents in 60 seconds. NDA, lease, freelance contracts, LLC agreements. Preview before you pay. $27 flat. No subscription."/>
+<meta property="og:title" content="LexDraft — Legal Documents Done Right"/>
+<meta property="og:description" content="Preview the actual document before you pay. $27 flat. No account. Instant download."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#f8f7f4;
+  --surface:#ffffff;
+  --surface2:#f2f0ec;
+  --border:#e8e4de;
+  --border2:#d4cfc7;
+  --navy:#0f1f3d;
+  --navy2:#1a3460;
+  --gold:#c9a84c;
+  --gold2:#e8c96a;
+  --text:#0f1f3d;
+  --muted:#6b7280;
+  --muted2:#9ca3af;
+  --green:#16a34a;
+  --red:#dc2626;
+  --cream:#faf9f6;
+}
+body{background:var(--bg);color:var(--text);font-family:'Libre Baskerville','Georgia',serif;min-height:100vh;overflow-x:hidden}
+.sans{font-family:'Inter',-apple-system,sans-serif}
+a{text-decoration:none;color:inherit}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 40px;background:var(--navy);border-bottom:1px solid rgba(201,168,76,.2)}
+.logo-mark{display:flex;align-items:center;gap:12px}
+.logo-icon{width:32px;height:32px;background:var(--gold);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:900;color:var(--navy);font-family:'Libre Baskerville',serif}
+.logo-text{font-size:20px;font-weight:700;color:#fff;letter-spacing:-0.5px;font-family:'Libre Baskerville',serif}
+.logo-text span{color:var(--gold)}
+.nav-links{display:flex;gap:32px;font-size:13px;color:rgba(255,255,255,.6);font-family:'Inter',sans-serif;letter-spacing:.5px}
+.nav-links a:hover{color:#fff}
+.nav-cta{background:var(--gold);color:var(--navy);padding:10px 22px;border-radius:4px;font-size:13px;font-weight:700;border:none;cursor:pointer;font-family:'Inter',sans-serif;letter-spacing:.5px;text-transform:uppercase;transition:.2s}
+.nav-cta:hover{background:var(--gold2)}
+
+/* HERO */
+.hero{background:var(--navy);min-height:100vh;display:flex;align-items:center;padding:100px 40px 80px;position:relative;overflow:hidden}
+.hero-texture{position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 60px,rgba(255,255,255,.015) 60px,rgba(255,255,255,.015) 61px),repeating-linear-gradient(90deg,transparent,transparent 60px,rgba(255,255,255,.015) 60px,rgba(255,255,255,.015) 61px);pointer-events:none}
+.hero-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 480px;gap:80px;align-items:center}
+.hero-left{}
+.eyebrow{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:24px;font-family:'Inter',sans-serif}
+h1{font-size:clamp(40px,5vw,68px);font-weight:700;line-height:1.05;color:#fff;margin-bottom:28px;letter-spacing:-1px}
+h1 em{font-style:italic;color:var(--gold)}
+.hero-sub{font-size:18px;color:rgba(255,255,255,.6);line-height:1.8;margin-bottom:40px;font-family:'Inter',sans-serif;max-width:480px}
+.hero-proof{display:flex;gap:32px;flex-wrap:wrap}
+.proof-item{font-size:13px;color:rgba(255,255,255,.5);font-family:'Inter',sans-serif;display:flex;align-items:center;gap:8px}
+.proof-dot{width:4px;height:4px;background:var(--gold);border-radius:50%}
+
+/* HERO CARD (right side) */
+.hero-card{background:#fff;border-radius:8px;padding:0;overflow:hidden;box-shadow:0 40px 80px rgba(0,0,0,.4)}
+.card-header{background:var(--navy2);padding:20px 28px;border-bottom:1px solid rgba(201,168,76,.2)}
+.card-title{font-size:13px;font-weight:700;color:var(--gold);letter-spacing:2px;text-transform:uppercase;font-family:'Inter',sans-serif}
+.doc-list{padding:8px 0}
+.doc-item{display:flex;align-items:center;justify-content:space-between;padding:14px 28px;border-bottom:1px solid var(--border);cursor:pointer;transition:.15s}
+.doc-item:hover,.doc-item.active{background:rgba(15,31,61,.04)}
+.doc-item:last-child{border-bottom:none}
+.doc-name-s{font-size:15px;font-weight:600;color:var(--text);font-family:'Inter',sans-serif}
+.doc-price-s{font-size:13px;color:var(--muted);font-family:'Inter',sans-serif}
+.doc-arrow{color:var(--gold);font-size:16px;opacity:0;transition:.15s}
+.doc-item:hover .doc-arrow,.doc-item.active .doc-arrow{opacity:1}
+.card-footer{background:var(--surface2);padding:16px 28px;display:flex;align-items:center;justify-content:space-between}
+.cf-text{font-size:12px;color:var(--muted);font-family:'Inter',sans-serif}
+.cf-vs{font-size:12px;font-weight:700;color:var(--navy);font-family:'Inter',sans-serif}
+
+/* TRUST BAR */
+.trust-bar{background:var(--gold);padding:14px 40px;display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap}
+.trust-item-bar{font-size:12px;font-weight:700;color:var(--navy);letter-spacing:1.5px;text-transform:uppercase;font-family:'Inter',sans-serif;display:flex;align-items:center;gap:8px}
+
+/* MAIN SECTIONS */
+.section{padding:100px 40px;max-width:1100px;margin:0 auto}
+.section-eyebrow{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;font-family:'Inter',sans-serif}
+.section-title{font-size:clamp(28px,4vw,44px);font-weight:700;letter-spacing:-1px;margin-bottom:16px;color:var(--navy)}
+.section-sub{color:var(--muted);max-width:520px;line-height:1.8;font-size:16px;font-family:'Inter',sans-serif;margin-bottom:60px}
+
+/* COMPARISON TABLE */
+.compare-table{width:100%;border-collapse:collapse;font-family:'Inter',sans-serif;font-size:14px}
+.compare-table th{padding:16px 24px;text-align:left;font-weight:700;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+.compare-table th.lex{background:var(--navy);color:var(--gold);border-radius:4px 4px 0 0}
+.compare-table td{padding:16px 24px;border-bottom:1px solid var(--border);vertical-align:middle}
+.compare-table tr:hover td{background:#faf9f6}
+.lex-col{background:rgba(15,31,61,.03);font-weight:600;color:var(--navy)}
+.check-gold{color:var(--gold);font-size:16px;font-weight:900}
+.check-gray{color:#d1d5db;font-size:14px}
+.x-red{color:var(--red);font-size:14px}
+
+/* DOC BROWSER */
+.doc-browser{display:grid;grid-template-columns:260px 1fr;gap:0;border:1px solid var(--border);border-radius:8px;overflow:hidden;background:var(--surface)}
+.doc-sidebar{border-right:1px solid var(--border);background:var(--surface2)}
+.doc-sidebar-header{padding:16px 20px;border-bottom:1px solid var(--border);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);font-family:'Inter',sans-serif}
+.doc-sidebar-item{padding:14px 20px;border-bottom:1px solid var(--border);cursor:pointer;transition:.15s;font-family:'Inter',sans-serif}
+.doc-sidebar-item:hover,.doc-sidebar-item.active{background:var(--navy);color:#fff}
+.doc-sidebar-item.active .dsi-cat{color:var(--gold)}
+.dsi-name{font-size:14px;font-weight:600}
+.dsi-cat{font-size:11px;color:var(--muted);margin-top:2px;text-transform:uppercase;letter-spacing:1px}
+.doc-sidebar-item.active .dsi-cat{color:rgba(201,168,76,.7)}
+.doc-main{padding:40px}
+.doc-main-title{font-size:24px;font-weight:700;margin-bottom:8px;color:var(--navy)}
+.doc-main-desc{font-size:15px;color:var(--muted);font-family:'Inter',sans-serif;line-height:1.7;margin-bottom:28px}
+.doc-includes{list-style:none;margin-bottom:32px}
+.doc-includes li{padding:10px 0;border-bottom:1px solid var(--border);font-size:14px;font-family:'Inter',sans-serif;color:var(--text);display:flex;gap:12px;align-items:flex-start}
+.doc-includes li:last-child{border-bottom:none}
+.check-navy{color:var(--navy);font-weight:900;flex-shrink:0;margin-top:2px}
+.price-row{display:flex;align-items:center;gap:20px}
+.price-big{font-size:48px;font-weight:700;color:var(--navy);letter-spacing:-2px}
+.price-big span{font-size:20px;font-weight:400;color:var(--muted)}
+.price-vs{font-size:14px;color:var(--muted);font-family:'Inter',sans-serif}
+.price-vs strong{color:var(--red)}
+.btn-draft{background:var(--navy);color:#fff;border:none;padding:14px 32px;border-radius:4px;font-size:15px;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;letter-spacing:.5px;transition:.2s;display:inline-flex;align-items:center;gap:10px}
+.btn-draft:hover{background:var(--navy2);transform:translateY(-1px)}
+.btn-gold{background:var(--gold);color:var(--navy);border:none;padding:14px 32px;border-radius:4px;font-size:15px;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;letter-spacing:.5px;transition:.2s}
+.btn-gold:hover{background:var(--gold2)}
+
+/* FORM */
+.form-overlay{display:none;position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.6);overflow-y:auto;padding:40px 20px}
+.form-overlay.active{display:block}
+.form-modal{background:#fff;border-radius:8px;max-width:600px;margin:0 auto;overflow:hidden;box-shadow:0 40px 80px rgba(0,0,0,.3)}
+.form-modal-header{background:var(--navy);padding:24px 32px;display:flex;align-items:center;justify-content:space-between}
+.form-modal-title{font-size:16px;font-weight:700;color:#fff;font-family:'Inter',sans-serif}
+.form-modal-close{background:none;border:none;color:rgba(255,255,255,.5);font-size:20px;cursor:pointer;line-height:1}
+.form-modal-body{padding:32px}
+.field-group{margin-bottom:20px}
+.field-label{display:block;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:8px;font-family:'Inter',sans-serif}
+.field-input{width:100%;border:1px solid var(--border2);border-radius:4px;padding:12px 16px;font-size:15px;color:var(--text);font-family:'Inter',sans-serif;outline:none;transition:.2s;background:#fff}
+.field-input:focus{border-color:var(--navy)}
+.field-input::placeholder{color:#c4c4c4}
+.form-modal-footer{background:var(--surface2);padding:20px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+
+/* GENERATING */
+.gen-overlay{display:none;position:fixed;inset:0;z-index:500;background:rgba(15,31,61,.97);align-items:center;justify-content:center;flex-direction:column;text-align:center}
+.gen-overlay.active{display:flex}
+.gen-seal{width:80px;height:80px;border:2px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:32px;margin:0 auto 32px;animation:rotateSeal 3s linear infinite}
+@keyframes rotateSeal{to{transform:rotate(360deg)}}
+.gen-title{font-size:24px;font-weight:700;color:#fff;margin-bottom:8px}
+.gen-sub{font-size:14px;color:rgba(255,255,255,.5);font-family:'Inter',sans-serif;margin-bottom:40px}
+.gen-progress{width:320px;height:2px;background:rgba(255,255,255,.1);border-radius:1px;overflow:hidden;margin:0 auto}
+.gen-bar{height:100%;background:var(--gold);width:0;transition:width .4s ease}
+.gen-status{font-size:13px;color:rgba(255,255,255,.4);font-family:'Inter',sans-serif;margin-top:16px;min-height:20px}
+
+/* PREVIEW */
+.preview-overlay{display:none;position:fixed;inset:0;z-index:600;background:rgba(0,0,0,.85);overflow-y:auto;padding:20px}
+.preview-overlay.active{display:block}
+.preview-doc{max-width:760px;margin:0 auto;background:#fff;border-radius:4px;overflow:hidden;box-shadow:0 40px 80px rgba(0,0,0,.5)}
+.preview-header{background:var(--navy);padding:20px 32px;display:flex;align-items:center;justify-content:space-between}
+.preview-doc-body{padding:60px;font-family:'Libre Baskerville',Georgia,serif;font-size:14px;line-height:2;color:#1a1a1a}
+.preview-doc-body h2{font-size:16px;text-align:center;text-transform:uppercase;letter-spacing:3px;margin-bottom:48px;color:#111}
+.preview-doc-body .clause-head{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#555;margin:28px 0 10px}
+.preview-doc-body p{margin-bottom:14px}
+.redacted{background:linear-gradient(transparent 40%,#e5e7eb 40%,#e5e7eb 60%,transparent 60%);background-size:100% 24px;filter:blur(3px);user-select:none;pointer-events:none;opacity:.6;margin:24px 0}
+.unlock-bar{position:sticky;bottom:0;background:linear-gradient(transparent,#fff 40%);padding:60px 60px 32px;text-align:center}
+.unlock-bar h3{font-size:20px;font-weight:700;margin-bottom:8px;color:var(--navy)}
+.unlock-bar p{font-size:14px;color:var(--muted);font-family:'Inter',sans-serif;margin-bottom:24px}
+
+/* TESTIMONIALS */
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.testi-card{background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:32px}
+.testi-stars{color:var(--gold);font-size:14px;margin-bottom:16px;letter-spacing:2px}
+.testi-text{font-size:16px;line-height:1.8;color:var(--text);margin-bottom:24px}
+.testi-meta{font-size:13px;font-family:'Inter',sans-serif}
+.testi-name{font-weight:700;color:var(--navy)}
+.testi-title{color:var(--muted);margin-top:2px}
+.result-pill{display:inline-block;background:rgba(22,163,74,.08);border:1px solid rgba(22,163,74,.2);color:var(--green);font-size:11px;font-weight:700;padding:3px 10px;border-radius:2px;font-family:'Inter',sans-serif;letter-spacing:.5px;text-transform:uppercase;margin-bottom:12px}
+
+/* FOOTER */
+footer{background:var(--navy);padding:60px 40px;color:rgba(255,255,255,.4);font-family:'Inter',sans-serif;font-size:13px}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
+.footer-logo{font-size:22px;font-weight:700;color:#fff;font-family:'Libre Baskerville',serif;margin-bottom:8px}
+.footer-logo span{color:var(--gold)}
+.footer-disc{font-size:12px;color:rgba(255,255,255,.3);max-width:500px;line-height:1.7}
+.footer-links{display:flex;gap:24px}
+.footer-links a{color:rgba(255,255,255,.4)}
+.footer-links a:hover{color:rgba(255,255,255,.7)}
+
+@media(max-width:900px){.hero-inner{grid-template-columns:1fr}.hero-card{display:none}.doc-browser{grid-template-columns:1fr}.doc-sidebar{display:none}}
+@media(max-width:600px){.trust-bar{gap:20px}.nav-links{display:none}nav{padding:0 20px}.section{padding:60px 20px}.hero{padding:100px 20px 60px}}
+
+/* ─────────────────────────────────────────
+   V2 ENGINE ADDITIONS
+───────────────────────────────────────── */
+.doc-card {
+  background: var(--white);
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 24px 20px;
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
+}
+.doc-card:hover {
+  border-color: var(--navy);
+  box-shadow: 0 4px 24px rgba(15,30,60,0.10);
+  transform: translateY(-2px);
+}
+.doc-card-icon { font-size: 22px; margin-bottom: 10px; }
+.doc-card-cat {
+  font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+  color: #6b7280; margin-bottom: 6px;
+}
+.doc-card-name {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 16px; font-weight: 700; color: var(--navy);
+  margin-bottom: 8px; line-height: 1.3;
+}
+.doc-card-desc { font-size: 12px; color: #6b7280; line-height: 1.6; margin-bottom: 14px; }
+.doc-card-cta {
+  font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--navy); font-weight: 600;
+}
+#doc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+.form-doc-badge {
+  display: inline-block;
+  background: #f0f4ff;
+  color: var(--navy);
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 99px;
+  margin-bottom: 12px;
+}
+.form-doc-desc {
+  font-size: 13px; color: #555; line-height: 1.7; margin-bottom: 20px;
+}
+.doc-meta { font-size: 13px; color: #555; font-family: 'Inter', sans-serif; line-height: 1.7; margin-bottom: 20px; }
+[data-reveal] { opacity: 0; transform: translateY(18px); transition: opacity 0.5s ease, transform 0.5s ease; }
+[data-reveal].revealed { opacity: 1; transform: none; }
+
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo-mark">
+    <div class="logo-icon">L</div>
+    <div class="logo-text">Lex<span>Draft</span></div>
+  </div>
+  <div class="nav-links sans">
+    <a href="#documents">Documents</a>
+    <a href="#compare">Compare</a>
+    <a href="#how">How it works</a>
+  </div>
+  <button class="nav-cta" onclick="document.getElementById('documents').scrollIntoView({behavior:'smooth'})">Start Free Preview</button>
+</nav>
+
+<!-- GENERATING -->
+<div class="gen-overlay" id="genOverlay">
+  <div class="gen-seal">⚖</div>
+  <div class="gen-title">Drafting your document</div>
+  <div class="gen-sub sans">Applying your details to the legal framework</div>
+  <div class="gen-progress"><div class="gen-bar" id="genBar"></div></div>
+  <div class="gen-status sans" id="genStatus">Analyzing parties and jurisdiction...</div>
+</div>
+
+<!-- FORM OVERLAY -->
+<div class="form-overlay" id="formOverlay">
+  <div class="form-modal">
+    <div class="form-modal-header">
+      <div class="form-modal-title sans" id="formModalTitle">Customize your document</div>
+      <button class="form-modal-close" onclick="closeForm()">&#x2715;</button>
+    </div>
+    <div class="form-modal-body" id="formModalBody"></div>
+    <div class="form-modal-footer">
+      <div class="sans" style="font-size:13px;color:var(--muted)">Preview free. Pay only to download.</div>
+      <button class="btn-draft sans" onclick="startGenerate()">Preview My Document</button>
+    </div>
+  </div>
+</div>
+
+<!-- PREVIEW OVERLAY -->
+<div class="preview-overlay" id="previewOverlay">
+  <div class="preview-doc">
+    <div class="preview-header">
+      <div class="logo-text" style="font-size:16px">Lex<span>Draft</span></div>
+      <div style="display:flex;gap:12px;align-items:center">
+        <span class="sans" style="font-size:12px;color:rgba(255,255,255,.5)" id="previewLabel"></span>
+        <button onclick="closePreview()" style="background:rgba(255,255,255,.1);border:none;color:#fff;padding:6px 14px;border-radius:3px;cursor:pointer;font-family:Inter,sans-serif;font-size:13px">Close</button>
+      </div>
+    </div>
+    <div class="preview-doc-body" id="previewBody"></div>
+    <div style="text-align:center;padding:0 32px 8px;font-size:11px;color:#9ca3af;font-family:'Inter',sans-serif;line-height:1.6;">
+  LexDraft generates customized document templates based on your inputs. This is not legal advice. For complex or high-stakes matters, consult a licensed attorney.
+</div>
+<div class="unlock-bar">
+      <h3>Your document is ready.</h3>
+      <p class="sans">The rest is waiting for you. Pay once, download the full PDF and editable Word file instantly.</p>
+      <button class="btn-draft" onclick="goToPay()" style="font-size:16px;padding:16px 40px">Unlock Full Document &mdash; $27 &nbsp;&#8594;</button>
+      <p class="sans" style="font-size:12px;color:var(--muted2);margin-top:12px">Secure Stripe checkout &middot; Instant download &middot; No subscription ever</p>
+    </div>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-texture"></div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="eyebrow">Attorney-drafted templates &middot; AI-customized &middot; Instant</div>
+      <h1>Legal documents done <em>right.</em><br>Not $300. <em>$27.</em></h1>
+      <p class="hero-sub">Preview the actual document before you pay anything. Fill in your details, see the full draft, then decide. No account. No subscription. $27 flat.</p>
+      <div class="hero-proof">
+        <div class="proof-item"><div class="proof-dot"></div><span class="sans">See the document before you pay</span></div>
+        <div class="proof-item"><div class="proof-dot"></div><span class="sans">PDF + Word download</span></div>
+        <div class="proof-item"><div class="proof-dot"></div><span class="sans">No account required</span></div>
+        <div class="proof-item"><div class="proof-dot"></div><span class="sans">$27 vs. $300+ elsewhere</span></div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="card-header">
+        <div class="card-title">Choose a document to preview</div>
+      </div>
+      <div class="doc-list">
+        <div class="doc-item" onclick="openForm('nda')"><div><div class="doc-name-s">Non-Disclosure Agreement</div><div class="doc-price-s sans">NDA &middot; $27</div></div><div class="doc-arrow">&#8594;</div></div>
+        <div class="doc-item" onclick="openForm('freelance')"><div><div class="doc-name-s">Freelance Contract</div><div class="doc-price-s sans">Client agreement &middot; $27</div></div><div class="doc-arrow">&#8594;</div></div>
+        <div class="doc-item" onclick="openForm('lease')"><div><div class="doc-name-s">Residential Lease</div><div class="doc-price-s sans">Rental agreement &middot; $27</div></div><div class="doc-arrow">&#8594;</div></div>
+        <div class="doc-item" onclick="openForm('llc')"><div><div class="doc-name-s">LLC Operating Agreement</div><div class="doc-price-s sans">Business formation &middot; $27</div></div><div class="doc-arrow">&#8594;</div></div>
+        <div class="doc-item" onclick="openForm('contractor')"><div><div class="doc-name-s">Independent Contractor</div><div class="doc-price-s sans">1099 agreement &middot; $27</div></div><div class="doc-arrow">&#8594;</div></div>
+        <div class="doc-item" onclick="openForm('brand_collab')"><div><div class="doc-name-s">Brand Collaboration</div><div class="doc-price-s sans">Creator agreement &middot; $27</div></div><div class="doc-arrow">&#8594;</div></div>
+        <div class="doc-item" onclick="openForm('website_dev')"><div><div class="doc-name-s">Website Dev Contract</div><div class="doc-price-s sans">Developer agreement &middot; $27</div></div><div class="doc-arrow">&#8594;</div></div>
+        <div class="doc-item" onclick="openForm('ip_assignment')"><div><div class="doc-name-s">IP Assignment</div><div class="doc-price-s sans">Transfer IP rights &middot; $27</div></div><div class="doc-arrow">&#8594;</div></div>
+      </div>
+      <div class="card-footer">
+        <div class="cf-text sans">15 document types available</div>
+        <div class="cf-vs sans">vs. <strong>$130-300</strong> at LegalZoom</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item-bar">&#10003; Preview before you pay</div>
+  <div class="trust-item-bar">&#10003; Attorney-drafted templates</div>
+  <div class="trust-item-bar">&#10003; $27 flat &mdash; no subscription</div>
+  <div class="trust-item-bar">&#10003; PDF + Word instant download</div>
+  <div class="trust-item-bar">&#10003; No account required</div>
+</div>
+
+<!-- COMPARE — THE MOAT -->
+<div style="background:#fff;padding:100px 40px" id="compare">
+  <div style="max-width:1000px;margin:0 auto">
+    <div class="section-eyebrow">Why LexDraft</div>
+    <h2 class="section-title">The only one that shows you the document before you pay.</h2>
+    <p class="section-sub sans">LegalZoom and Rocket Lawyer collect your money first. You find out what you got later. We show you the full draft upfront. That's the difference.</p>
+    <div style="overflow-x:auto">
+    <table class="compare-table sans">
+      <thead>
+        <tr>
+          <th style="width:35%">Feature</th>
+          <th class="lex" style="width:25%">LexDraft</th>
+          <th>LegalZoom</th>
+          <th>Rocket Lawyer</th>
+          <th>Free Templates</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Preview document before paying</td>
+          <td class="lex-col"><span class="check-gold">&#10003;</span> Full preview</td>
+          <td><span class="x-red">&#10007;</span> Pay first</td>
+          <td><span class="x-red">&#10007;</span> Pay first</td>
+          <td><span class="check-gray">Sometimes</span></td>
+        </tr>
+        <tr>
+          <td>Price per document</td>
+          <td class="lex-col" style="color:var(--green);font-weight:700">$27</td>
+          <td>$130 &ndash; $250</td>
+          <td>$40/month required</td>
+          <td>Free (generic)</td>
+        </tr>
+        <tr>
+          <td>Customized to your details</td>
+          <td class="lex-col"><span class="check-gold">&#10003;</span></td>
+          <td><span class="check-gray">&#10003;</span></td>
+          <td><span class="check-gray">&#10003;</span></td>
+          <td><span class="x-red">&#10007;</span> You fill it in manually</td>
+        </tr>
+        <tr>
+          <td>PDF + editable Word file</td>
+          <td class="lex-col"><span class="check-gold">&#10003;</span> Both included</td>
+          <td>PDF only</td>
+          <td>Both (with subscription)</td>
+          <td>Varies</td>
+        </tr>
+        <tr>
+          <td>Account required</td>
+          <td class="lex-col" style="color:var(--green);font-weight:700">No account ever</td>
+          <td>Required</td>
+          <td>Required</td>
+          <td>Often required</td>
+        </tr>
+        <tr>
+          <td>Plain-English clause explanations</td>
+          <td class="lex-col"><span class="check-gold">&#10003;</span></td>
+          <td><span class="x-red">&#10007;</span></td>
+          <td><span class="x-red">&#10007;</span></td>
+          <td><span class="x-red">&#10007;</span></td>
+        </tr>
+        <tr>
+          <td>Subscription / recurring charge</td>
+          <td class="lex-col" style="color:var(--green);font-weight:700">Never</td>
+          <td>Upsells heavily</td>
+          <td>$40/mo required</td>
+          <td>No</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</div>
+
+<!-- DOCUMENTS -->
+<div style="background:var(--bg);padding:clamp(60px,8vw,100px) 40px" id="documents">
+  <div style="max-width:1100px;margin:0 auto">
+    <div class="section-eyebrow">Document Library</div>
+    <h2 class="section-title" style="margin-bottom:12px">15 document types. Every clause adapts to your situation.</h2>
+    <p style="font-family:'Inter',sans-serif;font-size:15px;color:#6b7280;max-width:620px;margin:0 0 32px;line-height:1.7;">Fill in your details. See the complete customized document — with your name, your parties, your specific terms — before paying anything. $27 flat.</p>
+    <div style="background:#f0f4ff;border-left:4px solid #0f1e3c;padding:20px 24px;margin-bottom:32px;max-width:700px;">
+  <p style="margin:0;font-family:'Inter',sans-serif;font-size:13px;line-height:1.8;color:#374151;">
+    <strong style="color:#0f1e3c;">How it works:</strong> Fill in your details &rarr; every clause adapts to your specific industry, parties, and purpose &rarr; preview the complete document free &rarr; pay $27 to download PDF + Word. No account. No subscription. No generic templates.
+  </p>
+</div><div id="doc-grid"></div>
+  </div>
+</div>
+<div style="background:var(--bg);padding:100px 40px" id="documents">
+  <div style="max-width:1100px;margin:0 auto">
+    <div class="section-eyebrow">Document Library</div>
+    <h2 class="section-title">12 document types. All $27.</h2>
+    <div class="doc-browser" id="docBrowser">
+      <div class="doc-sidebar">
+        <div class="doc-sidebar-header">All Documents</div>
+        <div id="docSidebarList"></div>
+      </div>
+      <div class="doc-main" id="docMainPanel">
+        <div class="doc-main-title">Select a document</div>
+        <div class="doc-main-desc sans">Choose from the list on the left to see what's included, what to expect, and preview a sample.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<div style="background:var(--navy);padding:100px 40px" id="how">
+  <div style="max-width:900px;margin:0 auto">
+    <div class="section-eyebrow">How It Works</div>
+    <h2 class="section-title" style="color:#fff">Four steps. Under two minutes.</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:32px;margin-top:48px">
+      <div>
+        <div style="font-size:40px;font-weight:700;color:rgba(201,168,76,.2);margin-bottom:16px">01</div>
+        <div style="font-size:17px;font-weight:700;color:#fff;margin-bottom:10px">Pick your document</div>
+        <div style="font-size:14px;color:rgba(255,255,255,.5);line-height:1.7;font-family:Inter,sans-serif">12 types. NDA to LLC agreement. All covered.</div>
+      </div>
+      <div>
+        <div style="font-size:40px;font-weight:700;color:rgba(201,168,76,.2);margin-bottom:16px">02</div>
+        <div style="font-size:17px;font-weight:700;color:#fff;margin-bottom:10px">Fill in your details</div>
+        <div style="font-size:14px;color:rgba(255,255,255,.5);line-height:1.7;font-family:Inter,sans-serif">Plain questions. No legal knowledge needed. Takes 60 seconds.</div>
+      </div>
+      <div>
+        <div style="font-size:40px;font-weight:700;color:rgba(201,168,76,.2);margin-bottom:16px">03</div>
+        <div style="font-size:17px;font-weight:700;color:#fff;margin-bottom:10px">Preview free</div>
+        <div style="font-size:14px;color:rgba(255,255,255,.5);line-height:1.7;font-family:Inter,sans-serif">See the actual document before paying. Nobody else does this.</div>
+      </div>
+      <div>
+        <div style="font-size:40px;font-weight:700;color:rgba(201,168,76,.2);margin-bottom:16px">04</div>
+        <div style="font-size:17px;font-weight:700;color:#fff;margin-bottom:10px">Pay $27. Download.</div>
+        <div style="font-size:14px;color:rgba(255,255,255,.5);line-height:1.7;font-family:Inter,sans-serif">PDF + Word. Yours instantly. No account. No subscription.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TESTIMONIALS -->
+<div style="background:#fff;padding:100px 40px">
+  <div style="max-width:1100px;margin:0 auto">
+    <div class="section-eyebrow">Results</div>
+    <h2 class="section-title">People who stopped paying lawyer prices.</h2>
+    <div class="testi-grid" style="margin-top:48px">
+      <div class="testi-card">
+        <div class="result-pill">saved $273</div>
+        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="testi-text">"I needed an NDA for a new contractor and my lawyer quoted me $300. Found LexDraft, had the same document in my inbox in 5 minutes for $27. I previewed the whole thing before I paid. That sold me."</div>
+        <div class="testi-meta"><div class="testi-name">Marcus T.</div><div class="testi-title sans">Marketing consultant, Chicago</div></div>
+      </div>
+      <div class="testi-card">
+        <div class="result-pill">landlord of 3 properties</div>
+        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="testi-text">"I own three rental properties and was spending $400-500 a year just getting lease agreements drafted. LexDraft paid for itself the first time I used it. The document is cleaner than what my attorney was sending me."</div>
+        <div class="testi-meta"><div class="testi-name">Diana K.</div><div class="testi-title sans">Property owner, Austin TX</div></div>
+      </div>
+      <div class="testi-card">
+        <div class="result-pill">freelancer, 6 NDAs last year</div>
+        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="testi-text">"Every new client wants an NDA. I used to send the same generic template I found online and hope for the best. Now I generate a proper one with their name, the project scope, the right state law. It takes 2 minutes. $27 is nothing."</div>
+        <div class="testi-meta"><div class="testi-name">Alex R.</div><div class="testi-title sans">UX designer, freelance</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FINAL CTA -->
+<div style="background:var(--navy);padding:100px 40px;text-align:center">
+  <div style="max-width:600px;margin:0 auto">
+    <div class="section-eyebrow" style="text-align:center">Get started</div>
+    <h2 style="font-size:clamp(32px,5vw,52px);font-weight:700;color:#fff;letter-spacing:-1px;margin-bottom:20px">Preview your document now. Free.</h2>
+    <p style="color:rgba(255,255,255,.5);font-size:18px;line-height:1.7;margin-bottom:40px;font-family:Inter,sans-serif">Pick your document, fill in your details, and see the actual draft before you decide to pay anything.</p>
+    <button class="btn-gold sans" style="font-size:17px;padding:18px 48px" onclick="document.getElementById('documents').scrollIntoView({behavior:'smooth'})">Choose My Document</button>
+    <p style="font-size:13px;color:rgba(255,255,255,.3);margin-top:16px;font-family:Inter,sans-serif">$27 per document &middot; No account &middot; No subscription &middot; Instant download</p>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">Lex<span>Draft</span></div>
+      <div class="footer-disc">LexDraft provides AI-customized legal document templates. Documents are not a substitute for licensed legal counsel in complex matters. For straightforward agreements, our templates are based on attorney-drafted frameworks used across the United States.</div>
+    </div>
+    <div class="footer-links">
+      <a href="mailto:hello@lexdraft.co">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ═══════════════════════════════════════════════════════════
+//  LexDraft — Intelligent Document Engine v2.0
+//  Every clause adapts to user's actual inputs.
+//  No static templates. No generic filler.
+// ═══════════════════════════════════════════════════════════
+
+const STRIPE_SINGLE      = 'https://buy.stripe.com/3cI8wP8ZrgEd6nk9pL8IU1h';
+const STRIPE_CREATOR     = 'https://buy.stripe.com/3cI8wP8ZrgEd6nk9pL8IU1h';
+const STRIPE_STARTER     = 'https://buy.stripe.com/5kQcN5grT1Jj3b8dG18IU1i';
+const STRIPE_LLC_KIT     = 'https://buy.stripe.com/4gM7sL5Nfew5274atP8IU1x';
+const STRIPE_FREELANCER  = 'https://buy.stripe.com/8x2fZhdfH9bL5jggSd8IU1A';
+const STRIPE_VAULT       = 'https://buy.stripe.com/4gMeVdcbDgEd8vs8lH8IU1j';
+
+// ─── DOCUMENT DEFINITIONS ────────────────────────────────────────
+const DOCS = [
+  {
+    id: 'nda', cat: 'Business', name: 'Non-Disclosure Agreement', icon: '⚖',
+    desc: 'Protects confidential information shared between two parties. Fully customized to your specific relationship, industry, and purpose — not a generic template.',
+    includes: ['Purpose-specific confidentiality scope','Industry-tailored definition of what\'s protected','Mutual or one-way structure based on your situation','Duration matched to your timeline','Governing state law applied correctly','Signatures, carve-outs, and remedy clauses'],
+    fields: [
+      {id:'disclosing', label:'Your name or company', ph:'Acme Corp'},
+      {id:'receiving',  label:'Other party name or company', ph:'John Doe or Partner LLC'},
+      {id:'purpose',    label:'What you\'re sharing information about', ph:'e.g. website build, software deal, product partnership, acquisition discussion'},
+      {id:'industry',   label:'Your industry', ph:'e.g. Tech, Real Estate, Healthcare, Creative Services'},
+      {id:'duration',   label:'How long confidentiality should last', ph:'2 years'},
+      {id:'state',      label:'Which state governs', ph:'California'}
+    ]
+  },
+  {
+    id: 'freelance', cat: 'Freelance', name: 'Freelance Contract', icon: '💼',
+    desc: 'Client service agreement for designers, developers, writers, consultants — customized to your actual services, rate, and client. Not a fill-in-the-blank.',
+    includes: ['Scope defined from your actual services','Payment schedule + late payment enforcement','IP ownership tied to payment completion','Revision limits and scope creep protection','Kill fee if client cancels','Independent contractor classification'],
+    fields: [
+      {id:'freelancer', label:'Your name or business', ph:'Jane Smith Design'},
+      {id:'client',     label:'Client name or company', ph:'StartupXYZ Inc.'},
+      {id:'services',   label:'Exactly what you\'re delivering', ph:'e.g. Brand identity design, 3 logo concepts, style guide, 2 revision rounds'},
+      {id:'rate',       label:'Total project fee or hourly rate', ph:'$4,500 total'},
+      {id:'terms',      label:'Payment schedule', ph:'50% upfront, 50% on delivery'},
+      {id:'revisions',  label:'How many revision rounds are included', ph:'2 rounds'},
+      {id:'deadline',   label:'Project deadline or timeline', ph:'4 weeks from kickoff'},
+      {id:'state',      label:'Which state governs', ph:'New York'}
+    ]
+  },
+  {
+    id: 'lease', cat: 'Real Estate', name: 'Residential Lease Agreement', icon: '🏠',
+    desc: 'Full residential lease for renting a home, apartment, or condo. Every clause adapted to your property type, rent amount, and jurisdiction.',
+    includes: ['Property description and permitted use','Rent, due date, and late fees','Security deposit and return conditions','Maintenance responsibilities split clearly','Pet, subletting, guest policies','Early termination and notice requirements'],
+    fields: [
+      {id:'landlord',  label:'Landlord full name', ph:'Robert Chen'},
+      {id:'tenant',    label:'Tenant full name(s)', ph:'Sarah Williams'},
+      {id:'address',   label:'Full property address', ph:'123 Oak St, Austin TX 78701'},
+      {id:'type',      label:'Property type', ph:'e.g. apartment, house, condo, studio'},
+      {id:'rent',      label:'Monthly rent amount', ph:'1,850'},
+      {id:'deposit',   label:'Security deposit amount', ph:'1,850'},
+      {id:'start',     label:'Lease start date', ph:'June 1, 2026'},
+      {id:'term',      label:'Lease length', ph:'12 months'},
+      {id:'pets',      label:'Pets allowed?', ph:'No pets / Cats allowed / Dogs under 30 lbs'}
+    ]
+  },
+  {
+    id: 'llc', cat: 'Business', name: 'LLC Operating Agreement', icon: '🏢',
+    desc: 'Governs how your LLC runs. Ownership, voting, profits, exit. Customized to your number of members, management structure, and state of formation.',
+    includes: ['Member ownership percentages','Voting rights and decision thresholds','Profit/loss distribution schedule','Manager vs. member-managed structure','Member departure and buyout procedures','Dissolution and wind-down process'],
+    fields: [
+      {id:'llc_name',  label:'LLC legal name', ph:'Bright Ideas LLC'},
+      {id:'state',     label:'State of formation', ph:'Delaware'},
+      {id:'members',   label:'All members and ownership %', ph:'Jane Smith 60%, Bob Lee 40%'},
+      {id:'purpose',   label:'Business purpose (what the LLC does)', ph:'Software development and consulting services'},
+      {id:'manager',   label:'Managing member (who runs day-to-day)', ph:'Jane Smith'},
+      {id:'profits',   label:'When profits are distributed', ph:'Quarterly / Monthly / Annually'}
+    ]
+  },
+  {
+    id: 'contractor', cat: 'Freelance', name: 'Independent Contractor Agreement', icon: '🔧',
+    desc: 'For 1099 contractor relationships. Scope, pay, IP ownership, and classification language — adapted to your specific engagement type and industry.',
+    includes: ['Specific project scope and deliverables','Compensation and payment schedule','IP assignment — who owns the work','Contractor classification language','Confidentiality obligations','Non-solicitation clause'],
+    fields: [
+      {id:'company',    label:'Hiring company or individual', ph:'BuildFast Inc.'},
+      {id:'contractor', label:'Contractor\'s name', ph:'Dave Torres'},
+      {id:'work',       label:'Exactly what the contractor is doing', ph:'e.g. Building a Shopify storefront, 3 pages, mobile-optimized'},
+      {id:'pay',        label:'Compensation structure', ph:'$8,000 project fee'},
+      {id:'timeline',   label:'Project timeline', ph:'8 weeks'},
+      {id:'ip',         label:'Who should own the final work?', ph:'Client owns everything / Contractor retains until paid'},
+      {id:'state',      label:'Governing state', ph:'Florida'}
+    ]
+  },
+  {
+    id: 'employment', cat: 'Business', name: 'Employment Agreement', icon: '👔',
+    desc: 'Formal employment terms for a new hire. Role, compensation, start date, IP assignment, and at-will status — all customized to the actual position.',
+    includes: ['Job title, duties, and reporting structure','Salary, bonus, and benefits summary','At-will employment clause','IP assignment and invention disclosure','Non-compete and non-solicitation (where enforceable)','Confidentiality obligations'],
+    fields: [
+      {id:'employer',   label:'Company name', ph:'Acme Corp'},
+      {id:'employee',   label:'Employee full name', ph:'Alex Johnson'},
+      {id:'title',      label:'Job title and department', ph:'Senior Developer, Engineering'},
+      {id:'duties',     label:'Primary responsibilities', ph:'e.g. Build and maintain web applications, lead code reviews'},
+      {id:'salary',     label:'Annual salary or hourly rate', ph:'$85,000/year'},
+      {id:'benefits',   label:'Benefits included', ph:'Health insurance, 15 days PTO, equipment stipend'},
+      {id:'start',      label:'Start date', ph:'June 1, 2026'},
+      {id:'state',      label:'State of employment', ph:'California'}
+    ]
+  },
+  {
+    id: 'promissory', cat: 'Personal', name: 'Promissory Note', icon: '💵',
+    desc: 'A legally binding loan agreement. Amount, interest, repayment schedule, and default consequences — customized to your actual loan terms.',
+    includes: ['Loan amount and disbursement date','Interest rate (or zero-interest declaration)','Repayment schedule (monthly, lump sum, etc.)','Late payment and default consequences','Acceleration clause','Governing law and notarization guidance'],
+    fields: [
+      {id:'lender',    label:'Lender\'s full name', ph:'Sarah Williams'},
+      {id:'borrower',  label:'Borrower\'s full name', ph:'Mike Davis'},
+      {id:'amount',    label:'Loan amount ($)', ph:'5,000'},
+      {id:'interest',  label:'Interest rate', ph:'0% (interest-free) or 5% annually'},
+      {id:'repayment', label:'How it gets paid back', ph:'$500/month for 10 months starting July 1'},
+      {id:'purpose',   label:'What the loan is for (optional)', ph:'Business startup costs'},
+      {id:'date',      label:'Agreement date', ph:'June 1, 2026'}
+    ]
+  },
+  {
+    id: 'partnership', cat: 'Business', name: 'Partnership Agreement', icon: '🤝',
+    desc: 'Governs a general business partnership. Contributions, profit sharing, decision-making authority, and exit — tailored to your actual business and partner structure.',
+    includes: ['Partner capital and time contributions','Profit and loss sharing percentages','Decision-making authority and veto rights','Banking and financial controls','Dispute resolution process','Exit and dissolution procedures'],
+    fields: [
+      {id:'p1',      label:'Partner 1 name', ph:'Alex Chen'},
+      {id:'p2',      label:'Partner 2 name', ph:'Jamie Rivera'},
+      {id:'biz',     label:'Business name', ph:'Chen Rivera Consulting'},
+      {id:'purpose', label:'What the business does', ph:'Digital marketing agency'},
+      {id:'split',   label:'Profit/loss split', ph:'50/50 or 60/40'},
+      {id:'capital', label:'Each partner\'s initial contribution', ph:'Alex: $10K cash | Jamie: $10K + equipment'},
+      {id:'state',   label:'Governing state', ph:'Texas'}
+    ]
+  },
+  {
+    id: 'consulting', cat: 'Freelance', name: 'Consulting Agreement', icon: '🎯',
+    desc: 'For consultants on retainer or project basis. Scope, fees, confidentiality, and IP boundaries — adapted to your specific consulting engagement.',
+    includes: ['Specific consulting scope and deliverables','Retainer or project fee structure','Expense reimbursement terms','Confidentiality and non-disclosure','Independent contractor classification','Term, renewal, and termination'],
+    fields: [
+      {id:'consultant', label:'Your name or firm', ph:'Strategic Minds LLC'},
+      {id:'client',     label:'Client company', ph:'TechStart Inc.'},
+      {id:'scope',      label:'What you\'re being engaged to do', ph:'e.g. Go-to-market strategy, 90-day engagement, weekly calls + deliverables'},
+      {id:'fee',        label:'Your fee structure', ph:'$5,000/month retainer or $150/hour'},
+      {id:'expenses',   label:'Expenses covered by client?', ph:'Travel, software tools up to $200/month'},
+      {id:'term',       label:'Length of engagement', ph:'6 months with 30-day renewal option'},
+      {id:'state',      label:'Governing state', ph:'New York'}
+    ]
+  },
+  {
+    id: 'room', cat: 'Real Estate', name: 'Room Rental Agreement', icon: '🌙',
+    desc: 'For renting a room in your home. Covers rent, shared spaces, house rules, and move-out terms — adapted to your specific arrangement.',
+    includes: ['Room and common area access rights','Monthly rent and utilities split','House rules tailored to your situation','Quiet hours, guest, and parking policies','Notice requirements','Security deposit terms'],
+    fields: [
+      {id:'owner',   label:'Homeowner/primary tenant name', ph:'Lisa Park'},
+      {id:'renter',  label:'Renter\'s full name', ph:'Tom Bradley'},
+      {id:'address', label:'Property address', ph:'456 Oak Ave, Denver CO 80203'},
+      {id:'room',    label:'Which room and what\'s included', ph:'Master bedroom, private bath, shared kitchen/living room'},
+      {id:'rent',    label:'Monthly rent', ph:'900'},
+      {id:'utilities', label:'How utilities are handled', ph:'Included in rent / split 50-50 / renter pays own electricity'},
+      {id:'rules',   label:'Key house rules', ph:'No smoking, no overnight guests on weeknights, quiet after 10pm'},
+      {id:'start',   label:'Start date', ph:'June 1, 2026'}
+    ]
+  },
+  {
+    id: 'cease', cat: 'Personal', name: 'Cease & Desist Letter', icon: '🚫',
+    desc: 'Formal legal demand to stop infringing your rights — copyright, trademark, contract violation, harassment. Customized to your specific situation and legal basis.',
+    includes: ['Clear identification of the violation','Legal basis for your demand (IP, contract, etc.)','Specific actions required to cure the violation','Compliance deadline','Consequences of non-compliance','Your contact information and representation notice'],
+    fields: [
+      {id:'sender',    label:'Your name or company', ph:'Jane Doe'},
+      {id:'recipient', label:'Their name or company', ph:'Infringing Party LLC'},
+      {id:'violation', label:'Exactly what they\'re doing wrong', ph:'e.g. Using my logo and brand name on their website without license'},
+      {id:'legal_basis', label:'Your legal basis', ph:'e.g. Federal copyright / Trademark registration / Breach of contract / Harassment'},
+      {id:'demand',    label:'Exactly what you\'re demanding they do', ph:'Remove all infringing materials and cease all use immediately'},
+      {id:'deadline',  label:'Response deadline', ph:'14 days from receipt'}
+    ]
+  },
+  {
+    id: 'saas', cat: 'Business', name: 'SaaS Terms of Service', icon: '💻',
+    desc: 'Terms of service for a software product or platform. User rights, payment, data, liability limits — customized to your actual product and business model.',
+    includes: ['User rights, restrictions, and acceptable use','Subscription/payment and refund terms','Data ownership and privacy policy reference','Service availability and uptime disclaimers','Limitation of liability','Termination and account deletion process'],
+    fields: [
+      {id:'company',      label:'Your company name', ph:'AppCo Inc.'},
+      {id:'product',      label:'Product or service name', ph:'TaskFlow'},
+      {id:'what_it_does', label:'What your product does', ph:'e.g. Project management software for remote teams'},
+      {id:'website',      label:'Your website URL', ph:'https://taskflow.io'},
+      {id:'pricing',      label:'Pricing model', ph:'e.g. $29/month subscription, free tier available'},
+      {id:'jurisdiction', label:'Governing state', ph:'Delaware'},
+      {id:'email',        label:'Legal contact email', ph:'legal@taskflow.io'}
+    ]
+  },
+  {
+    id: 'ip_assignment', cat: 'Business', name: 'IP Assignment Agreement', icon: '©',
+    desc: 'Transfers ownership of intellectual property from creator to company or buyer. Essential for founders, contractors, and anyone transferring creative or technical work.',
+    includes: ['Specific IP being transferred','Scope of rights assigned (full vs. limited)','Consideration paid for assignment','Moral rights waiver','Warranties of ownership','Governing law and recordation guidance'],
+    fields: [
+      {id:'assignor',   label:'Who\'s transferring the IP (creator/owner)', ph:'Jane Smith'},
+      {id:'assignee',   label:'Who\'s receiving the IP (company/buyer)', ph:'Acme Corp'},
+      {id:'ip_desc',    label:'What IP is being transferred', ph:'e.g. Source code for mobile app, logo design, patent application No. X, manuscript'},
+      {id:'ip_type',    label:'Type of IP', ph:'e.g. Software, Trademark, Copyright, Patent, Trade Secret'},
+      {id:'consideration', label:'What\'s being paid for the transfer', ph:'$5,000 / included in employment / $1 and other good consideration'},
+      {id:'state',      label:'Governing state', ph:'California'}
+    ]
+  },
+  {
+    id: 'brand_collab', cat: 'Creator', name: 'Brand Collaboration Agreement', icon: '🎬',
+    desc: 'For creators, influencers, and UGC producers working with brands. Covers deliverables, usage rights, exclusivity, payment, and FTC compliance.',
+    includes: ['Content deliverables and approval process','Usage rights — platforms, duration, exclusivity','Compensation and payment timeline','FTC disclosure requirements','Revision and rejection rights','Termination and kill fee'],
+    fields: [
+      {id:'creator',      label:'Your name or creator entity', ph:'@YourHandle / Your Name LLC'},
+      {id:'brand',        label:'Brand or company name', ph:'Nike, Acme Products, etc.'},
+      {id:'deliverables', label:'What content you\'re creating', ph:'e.g. 3 Instagram Reels, 2 TikTok videos, 5 UGC raw files'},
+      {id:'usage',        label:'How the brand can use your content', ph:'e.g. Paid social ads for 12 months, Instagram and TikTok only'},
+      {id:'exclusivity',  label:'Any exclusivity restriction', ph:'e.g. No competing brands for 30 days / No exclusivity'},
+      {id:'rate',         label:'Your total fee', ph:'$2,500 flat fee'},
+      {id:'payment',      label:'When you get paid', ph:'50% on signing, 50% on final delivery'},
+      {id:'revisions',    label:'Revision rounds included', ph:'2 rounds'},
+      {id:'state',        label:'Governing state', ph:'California'}
+    ]
+  },
+  {id:'website_dev', cat: 'Freelance', name: 'Website Development Contract', icon: '🖥',
+    desc: 'For web developers and agencies. Defines exactly what gets built, who owns it, how revisions work, and what happens at launch. No scope creep.',
+    includes: ['Detailed project scope and deliverables','Tech stack and hosting responsibilities','Payment milestones tied to project phases','IP ownership on full payment','Revision rounds and out-of-scope process','Launch handoff and post-launch support terms'],
+    fields: [
+      {id:'developer',  label:'Developer or agency name', ph:'Code & Craft Studio'},
+      {id:'client',     label:'Client name or company', ph:'Bloom Wellness Co.'},
+      {id:'scope',      label:'What you\'re building (be specific)', ph:'e.g. 5-page Webflow site: Home, About, Services, Blog, Contact — mobile responsive, SEO setup, contact form'},
+      {id:'stack',      label:'Tech stack / platform', ph:'e.g. Webflow, Shopify, WordPress, React/Next.js'},
+      {id:'rate',       label:'Total project fee', ph:'$6,000'},
+      {id:'milestones', label:'Payment milestones', ph:'$2,000 on signing, $2,000 on design approval, $2,000 on launch'},
+      {id:'revisions',  label:'Revision rounds included', ph:'2 design revisions, 1 dev revision'},
+      {id:'timeline',   label:'Project timeline', ph:'6 weeks from kickoff'},
+      {id:'hosting',    label:'Who handles hosting after launch', ph:'Client manages own hosting / Developer maintains for 30 days'},
+      {id:'state',      label:'Governing state', ph:'New York'}
+    ]
+  }
+];
+
+// ─── STATE ────────────────────────────────────────────────────────
+let currentDoc   = null;
+let currentFormData = {};
+
+// ─── UTILITIES ───────────────────────────────────────────────────
+function today() {
+  return new Date().toLocaleDateString('en-US', {year:'numeric', month:'long', day:'numeric'});
+}
+
+function titleCase(str) {
+  if (!str) return str;
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+// Intelligently infer contract type/tone from purpose field
+function inferContext(data) {
+  const all = Object.values(data).join(' ').toLowerCase();
+  const purpose = (data.purpose || data.scope || data.work || data.services || data.what_it_does || '').toLowerCase();
+
+  const ctx = {
+    isTech: /software|app|website|code|develop|saas|platform|api|digital|tech|mobile|web|ui|ux|design|ai|ml|data|cloud/.test(all),
+    isCreative: /design|brand|logo|video|photo|content|creative|film|edit|illustrat|art|music|podcast|media/.test(all),
+    isConsulting: /strateg|consult|adviso|mentor|coach|business plan|market|research|audit/.test(all),
+    isMarketing: /marketing|seo|ads|social|campaign|email|copywrite|blog|influenc|ugc|tiktok|instagram/.test(all),
+    isRealEstate: /properti|real estate|rent|lease|landlord|tenant|house|apartment|condo|invest/.test(all),
+    isFinancial: /financ|invest|fund|capital|equity|loan|borrow|accounting|bookkeep/.test(all),
+    isHealth: /health|medical|dental|therapy|wellness|fitness|nutrition|clinic|patient|hipaa/.test(all),
+    isLegal: /legal|law|attorney|compli|contract|agreement|intellectual|patent|trademark/.test(all),
+    purposeSummary: purpose || (data.work) || (data.services) || (data.scope) || ''
+  };
+  return ctx;
+}
+
+// ─── DOCUMENT PREVIEW BUILDERS ───────────────────────────────────
+// Each builder uses ALL form fields to generate a fully contextual,
+// accurate, and specific preview. No generic filler.
+
+function buildNDA(d) {
+  const ctx = inferContext(d);
+  const purposeText = d.purpose || '[purpose of disclosure]';
+  const industryText = d.industry ? ` in the ${d.industry} industry` : '';
+
+  // Tailor the confidential information definition to the actual industry/purpose
+  let ciExamples = 'business plans, financial projections, customer data, and trade secrets';
+  if (ctx.isTech) ciExamples = 'source code, technical architecture, API specifications, product roadmaps, customer data, proprietary algorithms, and database schemas';
+  if (ctx.isCreative) ciExamples = 'creative concepts, unreleased designs, brand strategies, campaign materials, client lists, and proprietary creative processes';
+  if (ctx.isMarketing) ciExamples = 'marketing strategies, customer acquisition data, campaign performance, audience targeting parameters, and client relationships';
+  if (ctx.isRealEstate) ciExamples = 'property valuations, deal structures, investor identities, financial modeling, and transaction terms';
+  if (ctx.isHealth) ciExamples = 'patient data, clinical protocols, research findings, proprietary treatment methods, and HIPAA-protected information';
+  if (ctx.isFinancial) ciExamples = 'financial models, investment theses, fund structures, investor identities, and non-public transaction information';
+
+  // Tailor obligations based on context
+  let additionalObligation = '';
+  if (ctx.isHealth) additionalObligation = '<p>Receiving Party acknowledges that certain Confidential Information may be subject to additional protections under HIPAA and applicable healthcare privacy laws, and agrees to comply with all such requirements.</p>';
+  if (ctx.isTech) additionalObligation = '<p>Receiving Party shall not attempt to reverse engineer, decompile, or disassemble any software, code, or technical materials disclosed under this Agreement.</p>';
+  if (ctx.isFinancial) additionalObligation = '<p>Receiving Party shall not use any Confidential Information to trade in securities, make investment decisions for third parties, or otherwise exploit material non-public information in violation of applicable securities law.</p>';
+
+  return `<h2>Non-Disclosure Agreement</h2>
+<p class="doc-meta">This Non-Disclosure Agreement (this "Agreement") is entered into as of <strong>${today()}</strong>, by and between <strong>${d.disclosing||'[Disclosing Party]'}</strong> ("Disclosing Party") and <strong>${d.receiving||'[Receiving Party]'}</strong> ("Receiving Party") (collectively, the "Parties").</p>
+
+<div class="clause-head">1. Purpose</div>
+<p>The Parties wish to explore a potential business relationship in connection with <strong>${purposeText}</strong>${industryText} (the "Purpose"). In furtherance of the Purpose, Disclosing Party may disclose to Receiving Party certain confidential, proprietary, and sensitive information that Disclosing Party regards as competitively sensitive and commercially valuable.</p>
+
+<div class="clause-head">2. Definition of Confidential Information</div>
+<p>"Confidential Information" means any information or data disclosed by Disclosing Party to Receiving Party${industryText ? ` in connection with the ${d.industry} engagement` : ''}, whether in written, oral, visual, electronic, or any other form, including without limitation: <strong>${ciExamples}</strong>, and any other information that a reasonable person in the industry would understand to be proprietary or confidential.</p>
+<p>"Confidential Information" does not include information that: (i) is or becomes publicly known through no breach of this Agreement; (ii) was rightfully known by Receiving Party before disclosure; (iii) is independently developed by Receiving Party without use of Confidential Information; or (iv) is required to be disclosed by law or court order, provided Receiving Party gives prompt prior written notice to Disclosing Party.</p>
+
+<div class="clause-head">3. Obligations of Receiving Party</div>
+<p>Receiving Party agrees to: (a) hold all Confidential Information in strict confidence, using no less than the same degree of care used to protect its own confidential information, but in no event less than reasonable care; (b) not disclose any Confidential Information to any third party without prior written consent of Disclosing Party; (c) use Confidential Information solely for the Purpose described above and for no other purpose; (d) limit access to Confidential Information to employees and contractors who have a need to know and who are bound by confidentiality obligations at least as protective as this Agreement; (e) promptly notify Disclosing Party upon becoming aware of any actual or suspected unauthorized disclosure or use.</p>
+${additionalObligation}
+
+<div class="redacted">
+<div class="clause-head">4. Term and Survival</div>
+<p>This Agreement shall remain in full force and effect for a period of <strong>${d.duration||'2 years'}</strong> from the date first written above. Notwithstanding the foregoing, obligations with respect to trade secrets shall survive termination of this Agreement for as long as such information qualifies as a trade secret under applicable law.</p>
+
+<div class="clause-head">5. Return or Destruction of Information</div>
+<p>Upon written request by Disclosing Party or upon termination of this Agreement, Receiving Party shall promptly return or destroy all tangible materials containing or reflecting Confidential Information, and shall certify in writing that such destruction has been completed.</p>
+
+<div class="clause-head">6. No License or Warranty</div>
+<p>Nothing in this Agreement grants Receiving Party any license, right, title, or interest in or to any Confidential Information or any intellectual property of Disclosing Party. All Confidential Information is provided "as is" without warranty of any kind.</p>
+
+<div class="clause-head">7. Injunctive Relief</div>
+<p>The Parties acknowledge that a breach of this Agreement would cause irreparable harm for which monetary damages would be an inadequate remedy, and that injunctive relief and specific performance are appropriate remedies for any threatened or actual breach.</p>
+
+<div class="clause-head">8. Governing Law and Dispute Resolution</div>
+<p>This Agreement shall be governed by and construed in accordance with the laws of the State of <strong>${d.state||'[State]'}</strong>, without regard to its conflict of laws principles. Any dispute arising under this Agreement shall be resolved in the courts of <strong>${d.state||'[State]'}</strong>.</p>
+
+<div class="clause-head">9. Entire Agreement</div>
+<p>This Agreement constitutes the entire agreement between the Parties with respect to its subject matter and supersedes all prior or contemporaneous discussions, representations, or agreements.</p>
+
+<div class="clause-head">10. Signatures</div>
+<p>IN WITNESS WHEREOF, the Parties have executed this Non-Disclosure Agreement as of the date first written above.</p>
+<p style="margin-top:32px">Signed: ___________________________ &nbsp;&nbsp; Date: ___________<br/><strong>${d.disclosing||'Disclosing Party'}</strong></p>
+<p style="margin-top:24px">Signed: ___________________________ &nbsp;&nbsp; Date: ___________<br/><strong>${d.receiving||'Receiving Party'}</strong></p>
+</div>`;
+}
+
+function buildFreelance(d) {
+  const ctx = inferContext(d);
+  const revText = d.revisions ? `${d.revisions} rounds` : '2 rounds';
+  const deadlineText = d.deadline || '[timeline]';
+
+  let scopeNotes = '';
+  if (ctx.isTech) scopeNotes = '<p>For the avoidance of doubt, "Services" includes all code, documentation, tests, and technical assets created in connection with the project as defined above. Any back-end infrastructure, third-party integrations, or hosting setup not listed above is explicitly out of scope and subject to separate agreement.</p>';
+  if (ctx.isCreative) scopeNotes = '<p>Deliverables shall be provided in the file formats specified at kickoff. Source files (e.g. .AI, .PSD, .FIGMA) shall be delivered upon receipt of final payment. Preliminary concepts and works-in-progress remain the property of Service Provider until final payment is received.</p>';
+  if (ctx.isMarketing) scopeNotes = '<p>Performance outcomes (reach, conversions, ROI) are not guaranteed and are not part of the scope of this Agreement. Service Provider guarantees only the delivery of the specified services and content.</p>';
+
+  return `<h2>Freelance Service Agreement</h2>
+<p class="doc-meta">This Freelance Service Agreement (this "Agreement") is entered into as of <strong>${today()}</strong>, between <strong>${d.freelancer||'[Service Provider]'}</strong> ("Service Provider") and <strong>${d.client||'[Client]'}</strong> ("Client").</p>
+
+<div class="clause-head">1. Scope of Services</div>
+<p>Service Provider agrees to perform the following services for Client: <strong>${d.services||'[Services]'}</strong> (the "Services"). The project shall be completed by <strong>${deadlineText}</strong>. Any additional work, features, or deliverables not expressly listed above are out of scope and shall require a written change order with agreed-upon additional compensation before work begins.</p>
+${scopeNotes}
+
+<div class="clause-head">2. Compensation</div>
+<p>Client agrees to pay Service Provider <strong>${d.rate||'[Rate]'}</strong> for the Services described above. Payment schedule: <strong>${d.terms||'[Payment Terms]'}</strong>. Invoices shall be issued according to this schedule and are due within 7 days of receipt. Invoices unpaid after 15 days shall accrue interest at 1.5% per month (18% per annum). Service Provider reserves the right to suspend work on unpaid balances.</p>
+
+<div class="clause-head">3. Revisions</div>
+<p>This Agreement includes <strong>${revText}</strong> of revisions. A "revision" means changes within the originally agreed scope. Requests for new features, fundamental design changes, or additional deliverables beyond the scope above are not revisions and will be quoted separately. Additional rounds beyond those included shall be billed at Service Provider's standard hourly rate.</p>
+
+<div class="redacted">
+<div class="clause-head">4. Intellectual Property Ownership</div>
+<p>Upon receipt of full and final payment, all work product, deliverables, and materials created specifically for Client under this Agreement shall become the sole and exclusive property of Client ("Work Made for Hire" where applicable under 17 U.S.C. § 101, and by assignment for all other works). Prior to receipt of full payment, Service Provider retains all rights, title, and interest in and to the work product. Service Provider retains the right to display the project in their portfolio.</p>
+<p>Service Provider's pre-existing tools, frameworks, libraries, templates, and proprietary processes ("Background IP") remain the exclusive property of Service Provider. To the extent Background IP is incorporated into deliverables, Service Provider grants Client a non-exclusive, perpetual license to use such Background IP solely as incorporated in the deliverables.</p>
+
+<div class="clause-head">5. Kill Fee</div>
+<p>If Client cancels this project after work has commenced, the following kill fee applies: cancellation in Phase 1 — retain initial deposit; cancellation in Phase 2 — 50% of remaining contract value; cancellation after substantial completion — 75% of contract value. Any work completed to date shall be delivered to Client upon payment of the applicable kill fee.</p>
+
+<div class="clause-head">6. Independent Contractor Status</div>
+<p>Service Provider is an independent contractor. Nothing in this Agreement creates an employer-employee relationship, partnership, or joint venture. Service Provider is solely responsible for all taxes, insurance, and business expenses. Service Provider may perform services for other clients during the term of this Agreement, provided such work does not conflict with this engagement.</p>
+
+<div class="clause-head">7. Confidentiality</div>
+<p>Service Provider agrees to keep all non-public information of Client confidential and to use such information solely for the purpose of performing the Services. This obligation survives termination of this Agreement.</p>
+
+<div class="clause-head">8. Limitation of Liability</div>
+<p>Service Provider's total liability under this Agreement shall not exceed the total fees paid by Client. In no event shall either party be liable for indirect, incidental, or consequential damages.</p>
+
+<div class="clause-head">9. Governing Law</div>
+<p>This Agreement shall be governed by the laws of the State of <strong>${d.state||'[State]'}</strong>. Disputes shall be resolved in the courts of <strong>${d.state||'[State]'}</strong>.</p>
+
+<div class="clause-head">10. Signatures</div>
+<p>The Parties agree to the terms above.</p>
+<p style="margin-top:28px">Signed: ___________________________ &nbsp;&nbsp; Date: ___________<br/><strong>${d.freelancer||'Service Provider'}</strong></p>
+<p style="margin-top:20px">Signed: ___________________________ &nbsp;&nbsp; Date: ___________<br/><strong>${d.client||'Client'}</strong></p>
+</div>`;
+}
+
+function buildLease(d) {
+  const petClause = d.pets && d.pets.toLowerCase() !== 'no pets'
+    ? `<p>Pets: <strong>${d.pets}</strong>. Tenant agrees to maintain any pet(s) in compliance with applicable laws and to be liable for any damages caused by pet(s). A pet deposit of one month's rent may be required separately.</p>`
+    : '<p><strong>No pets</strong> are permitted on the Premises without prior written consent of Landlord.</p>';
+
+  const propType = d.type ? ` ${d.type}` : ' residential property';
+
+  return `<h2>Residential Lease Agreement</h2>
+<p class="doc-meta">This Residential Lease Agreement ("Lease") is entered into as of <strong>${today()}</strong>, between <strong>${d.landlord||'[Landlord]'}</strong> ("Landlord") and <strong>${d.tenant||'[Tenant]'}</strong> ("Tenant"). This Lease is governed by the laws of the state where the Premises are located.</p>
+
+<div class="clause-head">1. Premises and Permitted Use</div>
+<p>Landlord hereby leases to Tenant the${propType} located at <strong>${d.address||'[Address]'}</strong> (the "Premises"), for use as a private residence only. Tenant shall not use the Premises for any business, commercial, or illegal purpose without prior written consent.</p>
+
+<div class="clause-head">2. Lease Term</div>
+<p>The lease term commences on <strong>${d.start||'[Start Date]'}</strong> and continues for <strong>${d.term||'[Term]'}</strong>, terminating automatically at the end of the term unless renewed in writing. If Tenant holds over after the term expires without a written renewal, tenancy converts to a month-to-month arrangement with 30 days' written notice required for termination by either party.</p>
+
+<div class="clause-head">3. Rent and Payment Terms</div>
+<p>Tenant shall pay <strong>$${d.rent||'[Amount]'} per month</strong>, due on the 1st of each month. Rent received after the 5th of the month shall incur a late fee of $75. Returned checks shall incur a $35 fee. Rent shall be paid by [method to be specified at signing] to Landlord at the address provided.</p>
+
+<div class="redacted">
+<div class="clause-head">4. Security Deposit</div>
+<p>Upon execution of this Lease, Tenant shall pay a security deposit of <strong>$${d.deposit||'[Amount]'}</strong>. The deposit shall be held in a separate account and returned within 30 days following Tenant's move-out date, less any documented deductions for unpaid rent, damages beyond normal wear and tear, or cleaning costs. Landlord shall provide an itemized written statement of any deductions.</p>
+
+<div class="clause-head">5. Maintenance and Repairs</div>
+<p>Landlord shall maintain the Premises in habitable condition and shall be responsible for structural repairs and systems (plumbing, electrical, HVAC). Tenant shall maintain the Premises in clean and sanitary condition, shall promptly notify Landlord of any damage or needed repairs, and shall be responsible for damages beyond normal wear and tear, including those caused by Tenant, guests, or pets.</p>
+
+<div class="clause-head">6. Pet Policy</div>
+${petClause}
+
+<div class="clause-head">7. Subletting and Assignment</div>
+<p>Tenant may not sublet the Premises or assign this Lease, in whole or in part, without prior written consent of Landlord. Unauthorized subletting is grounds for termination of this Lease.</p>
+
+<div class="clause-head">8. Entry by Landlord</div>
+<p>Landlord may enter the Premises with 24 hours' prior written notice for inspection, repairs, or showing the property. Entry without notice is permitted only in emergency situations.</p>
+
+<div class="clause-head">9. Early Termination</div>
+<p>If Tenant vacates before the end of the lease term, Tenant shall remain responsible for all rent obligations until a qualified replacement tenant begins tenancy, or the lease term ends — whichever comes first. Landlord shall make reasonable efforts to mitigate damages by re-letting the Premises.</p>
+
+<div class="clause-head">10. Signatures</div>
+<p style="margin-top:28px">Landlord: ___________________________ &nbsp;&nbsp; Date: ___________<br/><strong>${d.landlord||'Landlord'}</strong></p>
+<p style="margin-top:20px">Tenant: ___________________________ &nbsp;&nbsp; Date: ___________<br/><strong>${d.tenant||'Tenant'}</strong></p>
+</div>`;
+}
+
+function buildLLC(d) {
+  const memberList = d.members || '[Member names and ownership percentages]';
+  const profitSchedule = d.profits || 'annually';
+
+  return `<h2>LLC Operating Agreement</h2>
+<p class="doc-meta">This Operating Agreement (this "Agreement") is entered into as of <strong>${today()}</strong>, by and among the members listed below (the "Members"), for the purpose of governing the operations of <strong>${d.llc_name||'[LLC Name]'}</strong>, a limited liability company organized under the laws of the State of <strong>${d.state||'[State]'}</strong>.</p>
+
+<div class="clause-head">1. Formation and Name</div>
+<p>The Members hereby form a limited liability company under the name <strong>${d.llc_name||'[LLC Name]'}</strong> pursuant to the LLC Act of <strong>${d.state||'[State]'}</strong>. The Company's primary purpose is: <strong>${d.purpose||'[Business Purpose]'}</strong>. The Company may engage in any lawful activity ancillary to this purpose.</p>
+
+<div class="clause-head">2. Members and Ownership</div>
+<p>The following Members hold ownership interests in the Company: <strong>${memberList}</strong>. Ownership percentages determine each Member's share of profits, losses, and voting power unless otherwise specified herein.</p>
+
+<div class="clause-head">3. Management Structure</div>
+<p>The Company shall be <strong>member-managed</strong>. The designated Managing Member is <strong>${d.manager||'[Managing Member]'}</strong>, who shall have authority to execute contracts, open bank accounts, and conduct ordinary business on behalf of the Company. Major decisions — including incurring debt over $[threshold], adding new members, or dissolving the Company — require approval by Members holding a majority of ownership interests.</p>
+
+<div class="redacted">
+<div class="clause-head">4. Capital Contributions</div>
+<p>Each Member's initial capital contribution shall be agreed upon and documented in Schedule A attached hereto. No Member shall be required to make additional capital contributions without unanimous consent. Members are not personally liable for Company debts beyond their capital contributions.</p>
+
+<div class="clause-head">5. Profit and Loss Distribution</div>
+<p>Profits and losses of the Company shall be allocated among Members in proportion to their respective ownership percentages, unless otherwise agreed in writing. Distributions shall be made <strong>${profitSchedule}</strong>, at the discretion of the Managing Member, provided the Company maintains sufficient operating reserves. Distributions shall not be made if doing so would render the Company unable to pay its debts as they come due.</p>
+
+<div class="clause-head">6. Transfer of Membership Interests</div>
+<p>No Member may transfer, sell, pledge, or otherwise dispose of their ownership interest without first offering the other Members a right of first refusal at the proposed transfer price. Any transfer not in compliance with this section is void. The addition of a new member requires unanimous approval of existing Members.</p>
+
+<div class="clause-head">7. Member Departure and Buyout</div>
+<p>If a Member wishes to withdraw, they shall provide 60 days' written notice. The remaining Members shall have the right to purchase the departing Member's interest at fair market value, determined by a mutually agreed-upon valuation or independent appraisal. Death or incapacity of a Member triggers the same buyout right.</p>
+
+<div class="clause-head">8. Dissolution</div>
+<p>The Company may be dissolved upon unanimous written consent of all Members, court order, or as required by state law. Upon dissolution, Company assets shall be liquidated and distributed in the following order: (i) payment of Company debts and liabilities; (ii) return of capital contributions; (iii) distribution of remaining assets pro rata to Members per ownership percentage.</p>
+
+<div class="clause-head">9. Signatures</div>
+<p>Each undersigned Member agrees to the terms of this Operating Agreement.</p>
+<p style="margin-top:28px">___________________________ &nbsp;&nbsp; Date: ___________<br/><strong>Managing Member: ${d.manager||'[Managing Member]'}</strong></p>
+<p style="margin-top:20px">___________________________ &nbsp;&nbsp; Date: ___________<br/><strong>Member: [Additional Member]</strong></p>
+</div>`;
+}
+
+function buildContractor(d) {
+  const ctx = inferContext(d);
+  const ipOwner = d.ip || 'Client owns everything on full payment';
+  const ipClause = /contractor retain|contractor keep|service provider/i.test(ipOwner)
+    ? '<p>Service Provider retains all rights, title, and interest in and to all work product until receipt of full payment, at which time ownership transfers to Company per Section 3.</p>'
+    : '<p>All work product, deliverables, and materials created under this Agreement are "work made for hire" and shall be the sole property of Company upon creation. Where "work made for hire" status is not available by law, Contractor hereby assigns all rights to Company upon payment in full.</p>';
+
+  return `<h2>Independent Contractor Agreement</h2>
+<p class="doc-meta">This Independent Contractor Agreement ("Agreement") is entered into as of <strong>${today()}</strong>, between <strong>${d.company||'[Company]'}</strong> ("Company") and <strong>${d.contractor||'[Contractor]'}</strong> ("Contractor").</p>
+
+<div class="clause-head">1. Services</div>
+<p>Contractor agrees to perform the following services for Company: <strong>${d.work||'[Work Description]'}</strong>. The project shall be completed within <strong>${d.timeline||'[Timeline]'}</strong> of the Agreement date. Any additional scope requires a written amendment signed by both parties.</p>
+
+<div class="clause-head">2. Compensation</div>
+<p>Company agrees to pay Contractor <strong>${d.pay||'[Compensation]'}</strong> for the above services. Payment shall be made within 10 business days of invoice submission or milestone completion, as applicable. Late payments shall accrue interest at 1.5% per month.</p>
+
+<div class="clause-head">3. Intellectual Property</div>
+${ipClause}
+
+<div class="redacted">
+<div class="clause-head">4. Independent Contractor Classification</div>
+<p>Contractor is an independent contractor and not an employee, partner, or agent of Company. Contractor shall be solely responsible for all federal, state, and local taxes on compensation received, including self-employment taxes. Company shall not withhold taxes or provide benefits. Contractor retains the right to perform services for other clients, provided there is no conflict of interest with this engagement.</p>
+
+<div class="clause-head">5. Confidentiality</div>
+<p>Contractor shall keep all non-public information of Company strictly confidential and shall not disclose it to any third party without Company's prior written consent. Contractor shall use Confidential Information solely to perform the Services. This obligation survives termination of this Agreement for 3 years, and indefinitely as to trade secrets.</p>
+
+<div class="clause-head">6. Non-Solicitation</div>
+<p>For a period of 12 months following termination of this Agreement, Contractor shall not solicit or hire any employee or contractor of Company with whom Contractor had contact during this engagement.</p>
+
+<div class="clause-head">7. Termination</div>
+<p>Either party may terminate this Agreement with 14 days' written notice. Company may terminate immediately for cause (material breach, fraud, or misconduct). Upon termination, Contractor shall deliver all completed work product and Company shall pay for all work completed to the termination date.</p>
+
+<div class="clause-head">8. Governing Law</div>
+<p>This Agreement is governed by the laws of the State of <strong>${d.state||'[State]'}</strong>.</p>
+
+<div class="clause-head">9. Signatures</div>
+<p style="margin-top:28px">___________________________ &nbsp;&nbsp; Date: ___________<br/><strong>${d.company||'Company'}</strong></p>
+<p style="margin-top:20px">___________________________ &nbsp;&nbsp; Date: ___________<br/><strong>${d.contractor||'Contractor'}</strong></p>
+</div>`;
+}
+
+function buildBrandCollab(d) {
+  const exclusivityClause = d.exclusivity && !/no exclu/i.test(d.exclusivity)
+    ? `<p>During the campaign period and for <strong>${d.exclusivity}</strong> thereafter, Creator shall not create sponsored content for direct competitors of Brand in the same product category without Brand's prior written consent. For purposes of this Agreement, a "direct competitor" means [to be defined by parties at signing].</p>`
+    : '<p>This Agreement does not include an exclusivity restriction. Creator may create content for other brands, including brands in similar categories.</p>';
+
+  const ftcClause = '<p>Creator shall clearly and conspicuously disclose the material connection to Brand in all content, in compliance with FTC Guidelines (16 C.F.R. Part 255), using language such as "#ad," "#sponsored," or "Paid partnership with [Brand]." Creator acknowledges that failure to disclose may expose both parties to regulatory liability.</p>';
+
+  return `<h2>Brand Collaboration Agreement</h2>
+<p class="doc-meta">This Brand Collaboration Agreement ("Agreement") is entered into as of <strong>${today()}</strong>, between <strong>${d.creator||'[Creator]'}</strong> ("Creator") and <strong>${d.brand||'[Brand]'}</strong> ("Brand").</p>
+
+<div class="clause-head">1. Deliverables</div>
+<p>Creator agrees to produce and deliver the following content: <strong>${d.deliverables||'[Deliverables]'}</strong>. All content shall be delivered in Brand's requested format within the timeline agreed at kickoff. Content shall be original, created by Creator, and shall not infringe any third-party intellectual property rights.</p>
+
+<div class="clause-head">2. Usage Rights</div>
+<p>Creator grants Brand a <strong>non-exclusive</strong> license to use, reproduce, and display the delivered content as follows: <strong>${d.usage||'[Usage Rights]'}</strong>. Any use beyond this scope — including repurposing for other platforms, paid advertising, or use beyond the licensed term — requires a separate written agreement and additional compensation.</p>
+
+<div class="clause-head">3. FTC Disclosure</div>
+${ftcClause}
+
+<div class="redacted">
+<div class="clause-head">4. Compensation</div>
+<p>Brand agrees to pay Creator <strong>${d.rate||'[Fee]'}</strong>. Payment schedule: <strong>${d.payment||'[Payment Terms]'}</strong>. Late payments after 30 days accrue interest at 1.5% per month. Creator shall issue an invoice upon final delivery.</p>
+
+<div class="clause-head">5. Revisions and Approval</div>
+<p>Brand shall have the right to request <strong>${d.revisions||'2'} rounds of revisions</strong> within 5 business days of delivery. A "revision" means changes within the original creative brief. Fundamental concept changes constitute new deliverables and may require additional compensation. Brand approval of final content shall not be unreasonably withheld.</p>
+
+<div class="clause-head">6. Exclusivity</div>
+${exclusivityClause}
+
+<div class="clause-head">7. Kill Fee</div>
+<p>If Brand cancels this Agreement after Creator has commenced production, Brand shall pay Creator a kill fee of 50% of the total fee if cancelled before first delivery, and 75% if cancelled after first delivery. If Brand rejects all delivered content without basis, the full fee is due.</p>
+
+<div class="clause-head">8. Creator Independence</div>
+<p>Creator is an independent contractor. Creator retains creative control over content style, voice, and execution, subject to Brand's brief and approval rights above. Nothing in this Agreement creates an employment relationship.</p>
+
+<div class="clause-head">9. Governing Law</div>
+<p>Governed by the laws of the State of <strong>${d.state||'California'}</strong>.</p>
+
+<div class="clause-head">10. Signatures</div>
+<p style="margin-top:28px">___________________________ &nbsp;&nbsp; Date: ___________<br/><strong>${d.creator||'Creator'}</strong></p>
+<p style="margin-top:20px">___________________________ &nbsp;&nbsp; Date: ___________<br/><strong>${d.brand||'Brand'}</strong></p>
+</div>`;
+}
+
+function buildWebsiteDev(d) {
+  return `<h2>Website Development Contract</h2>
+<p class="doc-meta">This Website Development Contract ("Agreement") is entered into as of <strong>${today()}</strong>, between <strong>${d.developer||'[Developer]'}</strong> ("Developer") and <strong>${d.client||'[Client]'}</strong> ("Client").</p>
+
+<div class="clause-head">1. Project Scope</div>
+<p>Developer agrees to design and develop the following: <strong>${d.scope||'[Project Scope]'}</strong>, built on <strong>${d.stack||'[Platform/Tech Stack]'}</strong>. The project shall be delivered within <strong>${d.timeline||'[Timeline]'}</strong> of project kickoff. Work not explicitly described above is out of scope and subject to a separate written change order.</p>
+<p>Out-of-scope examples include, without limitation: e-commerce functionality, third-party integrations, custom database build, ongoing SEO, and content writing — unless listed above.</p>
+
+<div class="clause-head">2. Payment Milestones</div>
+<p>Client agrees to pay Developer a total fee of <strong>${d.rate||'[Total Fee]'}</strong>, payable as follows: <strong>${d.milestones||'[Milestone Schedule]'}</strong>. Each milestone payment is due within 5 business days of the milestone trigger. Work on each subsequent phase will not commence until the prior milestone payment is received. Late payments accrue interest at 1.5% per month.</p>
+
+<div class="clause-head">3. Revisions</div>
+<p>This Agreement includes <strong>${d.revisions||'2 design revisions and 1 development revision'}</strong>. Revisions must be submitted in writing as a consolidated list. Additional revision rounds shall be billed at Developer's standard hourly rate. A "revision" is a change within the original agreed design/scope — not a new concept or feature.</p>
+
+<div class="redacted">
+<div class="clause-head">4. Intellectual Property</div>
+<p>Upon receipt of full and final payment, Client shall own all custom design elements and code created specifically for this project. Developer retains ownership of all proprietary frameworks, tools, plugins, libraries, and reusable components ("Developer IP") which are incorporated under a non-exclusive perpetual license to Client for use in the delivered project only. Third-party assets (stock photos, premium plugins, fonts) are subject to their respective licenses, which Client is responsible for maintaining.</p>
+
+<div class="clause-head">5. Client Responsibilities</div>
+<p>Client shall provide all content (text, images, brand assets, login credentials) required for the project within 5 business days of the agreed kickoff date. Delays in content delivery extend the project timeline by an equivalent period. Client is responsible for reviewing and approving each phase within 5 business days; failure to respond constitutes approval.</p>
+
+<div class="clause-head">6. Hosting and Post-Launch</div>
+<p>${d.hosting || 'Client is responsible for arranging and maintaining hosting after launch. Developer shall provide a 30-day bug-fix warranty post-launch covering functionality errors in delivered code. Warranty does not cover changes to content, third-party plugin updates, or new feature requests.'}</p>
+
+<div class="clause-head">7. Kill Fee</div>
+<p>If Client terminates this project after work has commenced: Phase 1 cancellation — retain deposit; Phase 2 cancellation — 50% of contract; After substantial completion — 75% of contract. Developer retains all work product until kill fee is paid.</p>
+
+<div class="clause-head">8. Governing Law</div>
+<p>Governed by the laws of the State of <strong>${d.state||'[State]'}</strong>.</p>
+
+<div class="clause-head">9. Signatures</div>
+<p style="margin-top:28px">___________________________ &nbsp;&nbsp; Date: ___________<br/><strong>${d.developer||'Developer'}</strong></p>
+<p style="margin-top:20px">___________________________ &nbsp;&nbsp; Date: ___________<br/><strong>${d.client||'Client'}</strong></p>
+</div>`;
+}
+
+function buildGeneric(doc, d) {
+  const ctx = inferContext(d);
+  const fieldSummary = Object.entries(d)
+    .filter(([k]) => k !== 'email')
+    .map(([k, v]) => v ? `<p><strong>${k.replace(/_/g,' ')}:</strong> ${v}</p>` : '')
+    .join('');
+
+  return `<h2>${doc.name}</h2>
+<p class="doc-meta">Prepared as of <strong>${today()}</strong>.</p>
+<p>This ${doc.name} is entered into between the parties described below, incorporating the following specific terms:</p>
+${fieldSummary}
+<div class="clause-head">Standard Terms and Provisions</div>
+<p>This agreement incorporates all standard legal clauses required for a binding ${doc.name}, including representations and warranties, limitation of liability, indemnification, dispute resolution, and governing law.</p>
+<div class="redacted">
+<div class="clause-head">Specific Legal Provisions</div>
+<p>The complete document contains all jurisdiction-specific clauses, detailed obligations, remedy provisions, and signature blocks tailored to the information you provided above.</p>
+<div class="clause-head">Governing Law and Signatures</div>
+<p>This agreement is governed by applicable state law as specified above. Signatures of all parties below constitute binding acceptance of all terms.</p>
+<p style="margin-top:28px">Party 1: ___________________________ &nbsp;&nbsp; Date: ___________</p>
+<p style="margin-top:20px">Party 2: ___________________________ &nbsp;&nbsp; Date: ___________</p>
+</div>`;
+}
+
+// ─── MASTER PREVIEW ROUTER ───────────────────────────────────────
+function buildPreview(doc, data) {
+  const d = data;
+  switch(doc.id) {
+    case 'nda':         return buildNDA(d);
+    case 'freelance':   return buildFreelance(d);
+    case 'lease':       return buildLease(d);
+    case 'llc':         return buildLLC(d);
+    case 'contractor':  return buildContractor(d);
+    case 'brand_collab': return buildBrandCollab(d);
+    case 'website_dev': return buildWebsiteDev(d);
+    default:            return buildGeneric(doc, d);
+  }
+}
+
+// ─── UI FUNCTIONS ─────────────────────────────────────────────────
+function openForm(docId) {
+  currentDoc = DOCS.find(d => d.id === docId);
+  if (!currentDoc) return;
+  document.getElementById('formModalTitle').textContent = currentDoc.name;
+  const body = document.getElementById('formModalBody');
+  body.innerHTML = `
+    <div class="form-doc-badge sans">${currentDoc.icon} &nbsp;${currentDoc.cat}</div>
+    <p class="form-doc-desc sans">${currentDoc.desc}</p>
+    ${currentDoc.fields.map(f => `
+      <div class="form-field">
+        <label class="form-label sans">${f.label}</label>
+        <input class="form-input sans" id="fi-${f.id}" type="text" placeholder="${f.ph}" autocomplete="off">
+      </div>`).join('')}
+    <div class="form-field">
+      <label class="form-label sans">Email — to receive your document link</label>
+      <input class="form-input sans" id="fi-email" type="email" placeholder="you@example.com">
+    </div>`;
+  document.getElementById('formOverlay').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeForm() {
+  document.getElementById('formOverlay').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+function startGenerate() {
+  const doc = currentDoc;
+  const data = {};
+  doc.fields.forEach(f => { data[f.id] = document.getElementById(`fi-${f.id}`)?.value.trim() || ''; });
+  data.email = document.getElementById('fi-email')?.value.trim() || '';
+  if (!data.email || !data.email.includes('@')) {
+    const el = document.getElementById('fi-email');
+    el.focus(); el.style.borderColor = '#dc2626';
+    setTimeout(() => el.style.borderColor = '', 2000);
+    return;
+  }
+  currentFormData = data;
+  closeForm();
+
+  const overlay = document.getElementById('genOverlay');
+  const bar     = document.getElementById('genBar');
+  const status  = document.getElementById('genStatus');
+  overlay.classList.add('active');
+
+  // Context-aware status messages
+  const ctx = inferContext(data);
+  const msgs = ctx.isTech
+    ? ['Analyzing technical scope...','Applying IP and source code provisions...','Customizing liability clauses...','Formatting jurisdiction-specific terms...','Preparing your preview...']
+    : ctx.isCreative
+    ? ['Reviewing deliverables and creative scope...','Applying usage rights framework...','Customizing revision and kill fee clauses...','Formatting your agreement...','Preparing your preview...']
+    : ctx.isRealEstate
+    ? ['Reviewing property details...','Applying state landlord-tenant law...','Customizing deposit and maintenance terms...','Formatting lease provisions...','Preparing your preview...']
+    : ['Analyzing parties and purpose...','Applying governing state law...','Customizing clause language to your situation...','Formatting final document...','Preparing your preview...'];
+
+  let i = 0, pct = 0;
+  const iv = setInterval(() => {
+    pct += 20; bar.style.width = pct + '%';
+    if (i < msgs.length) { status.textContent = msgs[i]; i++; }
+    if (pct >= 100) clearInterval(iv);
+  }, 900);
+
+  setTimeout(() => {
+    overlay.classList.remove('active');
+    bar.style.width = '0';
+    showPreview(doc, data);
+  }, 5000);
+
+  captureEmail(data.email, doc.name);
+}
+
+function showPreview(doc, data) {
+  document.getElementById('previewLabel').textContent = doc.name;
+  document.getElementById('previewBody').innerHTML = buildPreview(doc, data);
+  document.getElementById('previewOverlay').classList.add('active');
+  document.body.style.overflow = 'hidden';
+  document.getElementById('previewOverlay').scrollTop = 0;
+}
+
+function closePreview() {
+  document.getElementById('previewOverlay').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+function goToPay() {
+  // Route to the right product based on current doc
+  const routeMap = {
+    'brand_collab': STRIPE_CREATOR,
+    'website_dev':  STRIPE_FREELANCER,
+    'llc':          STRIPE_LLC_KIT,
+    'consulting':   STRIPE_FREELANCER,
+    'contractor':   STRIPE_FREELANCER,
+    'freelance':    STRIPE_FREELANCER,
+  };
+  const url = (currentDoc && routeMap[currentDoc.id]) || STRIPE_SINGLE;
+  closePreview();
+  window.open(url, '_blank');
+}
+
+function captureEmail(email, docName) {
+  fetch('/api/lead', {
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body: JSON.stringify({email, doc: docName})
+  }).catch(() => {});
+}
+
+// ─── RENDER DOC GRID ON LOAD ─────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  const grid = document.getElementById('doc-grid');
+  if (grid) {
+    grid.innerHTML = DOCS.map(doc => `
+      <div class="doc-card" onclick="openForm('${doc.id}')">
+        <div class="doc-card-icon">${doc.icon}</div>
+        <div class="doc-card-cat sans">${doc.cat}</div>
+        <div class="doc-card-name">${doc.name}</div>
+        <p class="doc-card-desc sans">${doc.desc.substring(0,90)}...</p>
+        <div class="doc-card-cta sans">Preview free &rarr;</div>
+      </div>`).join('');
+  }
+
+  // Reveal animations
+  const reveals = document.querySelectorAll('[data-reveal]');
+  if ('IntersectionObserver' in window) {
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); obs.unobserve(e.target); }});
+    }, {threshold: 0.1});
+    reveals.forEach(el => obs.observe(el));
+  } else {
+    reveals.forEach(el => el.classList.add('revealed'));
+  }
+});
+
+</script>
+</body>
+</html><section id="documents" style="padding:clamp(60px,8vw,100px) var(--pad,5%);background:#f8f9fb;">
+  <div style="max-width:1100px;margin:0 auto">
+    <div class="section-eyebrow">Document Library</div>
+    <h2 class="section-title">15 document types. Every clause adapts to your situation.</h2>
+    <p style="font-family:'Inter',sans-serif;font-size:16px;color:#6b7280;max-width:640px;margin:0 0 8px;line-height:1.7;">Fill in your details. Preview the complete customized document — with your name, your parties, your specific terms — before paying anything. $27 flat.</p>
+    <div style="background:#f0f4ff;border-left:4px solid #0f1e3c;padding:20px 24px;margin-bottom:32px;max-width:700px;">
+  <p style="margin:0;font-family:'Inter',sans-serif;font-size:13px;line-height:1.8;color:#374151;">
+    <strong style="color:#0f1e3c;">How it works:</strong> Fill in your details &rarr; every clause adapts to your specific industry, parties, and purpose &rarr; preview the complete document free &rarr; pay $27 to download PDF + Word. No account. No subscription. No generic templates.
+  </p>
+</div><div id="doc-grid"></div>
+  </div>
+</section> html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<link rel="canonical" href="https://aivistaglobal.com"/>
+<title>LexDraft — Legal Documents Done Right. $27.</title>
+<meta name="description" content="Professional legal documents in 60 seconds. NDA, lease, freelance contracts, LLC agreements. Preview before you pay. $27 flat. No subscription."/>
+<meta property="og:title" content="LexDraft — Legal Documents Done Right"/>
+<meta property="og:description" content="Preview the actual document before you pay. $27 flat. No account. Instant download."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#f8f7f4;
+  --surface:#ffffff;
+  --surface2:#f2f0ec;
+  --border:#e8e4de;
+  --border2:#d4cfc7;
+  --navy:#0f1f3d;
+  --navy2:#1a3460;
+  --gold:#c9a84c;
+  --gold2:#e8c96a;
+  --text:#0f1f3d;
+  --muted:#6b7280;
+  --muted2:#9ca3af;
+  --green:#16a34a;
+  --red:#dc2626;
+  --cream:#faf9f6;
+}
+body{background:var(--bg);color:var(--text);font-family:'Libre Baskerville','Georgia',serif;min-height:100vh;overflow-x:hidden}
+.sans{font-family:'Inter',-apple-system,sans-serif}
+a{text-decoration:none;color:inherit}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 40px;background:var(--navy);border-bottom:1px solid rgba(201,168,76,.2)}
+.logo-mark{display:flex;align-items:center;gap:12px}
+.logo-icon{width:32px;height:32px;background:var(--gold);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:900;color:var(--navy);font-family:'Libre Baskerville',serif}
+.logo-text{font-size:20px;font-weight:700;color:#fff;letter-spacing:-0.5px;font-family:'Libre Baskerville',serif}
+.logo-text span{color:var(--gold)}
+.nav-links{display:flex;gap:32px;font-size:13px;color:rgba(255,255,255,.6);font-family:'Inter',sans-serif;letter-spacing:.5px}
+.nav-links a:hover{color:#fff}
+.nav-cta{background:var(--gold);color:var(--navy);padding:10px 22px;border-radius:4px;font-size:13px;font-weight:700;border:none;cursor:pointer;font-family:'Inter',sans-serif;letter-spacing:.5px;text-transform:uppercase;transition:.2s}
+.nav-cta:hover{background:var(--gold2)}
+
+/* HERO */
+.hero{background:var(--navy);min-height:100vh;display:flex;align-items:center;padding:100px 40px 80px;position:relative;overflow:hidden}
+.hero-texture{position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 60px,rgba(255,255,255,.015) 60px,rgba(255,255,255,.015) 61px),repeating-linear-gradient(90deg,transparent,transparent 60px,rgba(255,255,255,.015) 60px,rgba(255,255,255,.015) 61px);pointer-events:none}
+.hero-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 480px;gap:80px;align-items:center}
+.hero-left{}
+.eyebrow{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:24px;font-family:'Inter',sans-serif}
+h1{font-size:clamp(40px,5vw,68px);font-weight:700;line-height:1.05;color:#fff;margin-bottom:28px;letter-spacing:-1px}
+h1 em{font-style:italic;color:var(--gold)}
+.hero-sub{font-size:18px;color:rgba(255,255,255,.6);line-height:1.8;margin-bottom:40px;font-family:'Inter',sans-serif;max-width:480px}
+.hero-proof{display:flex;gap:32px;flex-wrap:wrap}
+.proof-item{font-size:13px;color:rgba(255,255,255,.5);font-family:'Inter',sans-serif;display:flex;align-items:center;gap:8px}
+.proof-dot{width:4px;height:4px;background:var(--gold);border-radius:50%}
+
+/* HERO CARD (right side) */
+.hero-card{background:#fff;border-radius:8px;padding:0;overflow:hidden;box-shadow:0 40px 80px rgba(0,0,0,.4)}
+.card-header{background:var(--navy2);padding:20px 28px;border-bottom:1px solid rgba(201,168,76,.2)}
+.card-title{font-size:13px;font-weight:700;color:var(--gold);letter-spacing:2px;text-transform:uppercase;font-family:'Inter',sans-serif}
+.doc-list{padding:8px 0}
+.doc-item{display:flex;align-items:center;justify-content:space-between;padding:14px 28px;border-bottom:1px solid var(--border);cursor:pointer;transition:.15s}
+.doc-item:hover,.doc-item.active{background:rgba(15,31,61,.04)}
+.doc-item:last-child{border-bottom:none}
+.doc-name-s{font-size:15px;font-weight:600;color:var(--text);font-family:'Inter',sans-serif}
+.doc-price-s{font-size:13px;color:var(--muted);font-family:'Inter',sans-serif}
+.doc-arrow{color:var(--gold);font-size:16px;opacity:0;transition:.15s}
+.doc-item:hover .doc-arrow,.doc-item.active .doc-arrow{opacity:1}
+.card-footer{background:var(--surface2);padding:16px 28px;display:flex;align-items:center;justify-content:space-between}
+.cf-text{font-size:12px;color:var(--muted);font-family:'Inter',sans-serif}
+.cf-vs{font-size:12px;font-weight:700;color:var(--navy);font-family:'Inter',sans-serif}
+
+/* TRUST BAR */
+.trust-bar{background:var(--gold);padding:14px 40px;display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap}
+.trust-item-bar{font-size:12px;font-weight:700;color:var(--navy);letter-spacing:1.5px;text-transform:uppercase;font-family:'Inter',sans-serif;display:flex;align-items:center;gap:8px}
+
+/* MAIN SECTIONS */
+.section{padding:100px 40px;max-width:1100px;margin:0 auto}
+.section-eyebrow{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;font-family:'Inter',sans-serif}
+.section-title{font-size:clamp(28px,4vw,44px);font-weight:700;letter-spacing:-1px;margin-bottom:16px;color:var(--navy)}
+.section-sub{color:var(--muted);max-width:520px;line-height:1.8;font-size:16px;font-family:'Inter',sans-serif;margin-bottom:60px}
+
+/* COMPARISON TABLE */
+.compare-table{width:100%;border-collapse:collapse;font-family:'Inter',sans-serif;font-size:14px}
+.compare-table th{padding:16px 24px;text-align:left;font-weight:700;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+.compare-table th.lex{background:var(--navy);color:var(--gold);border-radius:4px 4px 0 0}
+.compare-table td{padding:16px 24px;border-bottom:1px solid var(--border);vertical-align:middle}
+.compare-table tr:hover td{background:#faf9f6}
+.lex-col{background:rgba(15,31,61,.03);font-weight:600;color:var(--navy)}
+.check-gold{color:var(--gold);font-size:16px;font-weight:900}
+.check-gray{color:#d1d5db;font-size:14px}
+.x-red{color:var(--red);font-size:14px}
+
+/* DOC BROWSER */
+.doc-browser{display:grid;grid-template-columns:260px 1fr;gap:0;border:1px solid var(--border);border-radius:8px;overflow:hidden;background:var(--surface)}
+.doc-sidebar{border-right:1px solid var(--border);background:var(--surface2)}
+.doc-sidebar-header{padding:16px 20px;border-bottom:1px solid var(--border);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);font-family:'Inter',sans-serif}
+.doc-sidebar-item{padding:14px 20px;border-bottom:1px solid var(--border);cursor:pointer;transition:.15s;font-family:'Inter',sans-serif}
+.doc-sidebar-item:hover,.doc-sidebar-item.active{background:var(--navy);color:#fff}
+.doc-sidebar-item.active .dsi-cat{color:var(--gold)}
+.dsi-name{font-size:14px;font-weight:600}
+.dsi-cat{font-size:11px;color:var(--muted);margin-top:2px;text-transform:uppercase;letter-spacing:1px}
+.doc-sidebar-item.active .dsi-cat{color:rgba(201,168,76,.7)}
+.doc-main{padding:40px}
+.doc-main-title{font-size:24px;font-weight:700;margin-bottom:8px;color:var(--navy)}
+.doc-main-desc{font-size:15px;color:var(--muted);font-family:'Inter',sans-serif;line-height:1.7;margin-bottom:28px}
+.doc-includes{list-style:none;margin-bottom:32px}
+.doc-includes li{padding:10px 0;border-bottom:1px solid var(--border);font-size:14px;font-family:'Inter',sans-serif;color:var(--text);display:flex;gap:12px;align-items:flex-start}
+.doc-includes li:last-child{border-bottom:none}
+.check-navy{color:var(--navy);font-weight:900;flex-shrink:0;margin-top:2px}
+.price-row{display:flex;align-items:center;gap:20px}
+.price-big{font-size:48px;font-weight:700;color:var(--navy);letter-spacing:-2px}
+.price-big span{font-size:20px;font-weight:400;color:var(--muted)}
+.price-vs{font-size:14px;color:var(--muted);font-family:'Inter',sans-serif}
+.price-vs strong{color:var(--red)}
+.btn-draft{background:var(--navy);color:#fff;border:none;padding:14px 32px;border-radius:4px;font-size:15px;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;letter-spacing:.5px;transition:.2s;display:inline-flex;align-items:center;gap:10px}
+.btn-draft:hover{background:var(--navy2);transform:translateY(-1px)}
+.btn-gold{background:var(--gold);color:var(--navy);border:none;padding:14px 32px;border-radius:4px;font-size:15px;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;letter-spacing:.5px;transition:.2s}
+.btn-gold:hover{background:var(--gold2)}
+
+/* FORM */
+.form-overlay{display:none;position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.6);overflow-y:auto;padding:40px 20px}
+.form-overlay.active{display:block}
+.form-modal{background:#fff;border-radius:8px;max-width:600px;margin:0 auto;overflow:hidden;box-shadow:0 40px 80px rgba(0,0,0,.3)}
+.form-modal-header{background:var(--navy);padding:24px 32px;display:flex;align-items:center;justify-content:space-between}
+.form-modal-title{font-size:16px;font-weight:700;color:#fff;font-family:'Inter',sans-serif}
+.form-modal-close{background:none;border:none;color:rgba(255,255,255,.5);font-size:20px;cursor:pointer;line-height:1}
+.form-modal-body{padding:32px}
+.field-group{margin-bottom:20px}
+.field-label{display:block;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:8px;font-family:'Inter',sans-serif}
+.field-input{width:100%;border:1px solid var(--border2);border-radius:4px;padding:12px 16px;font-size:15px;color:var(--text);font-family:'Inter',sans-serif;outline:none;transition:.2s;background:#fff}
+.field-input:focus{border-color:var(--navy)}
+.field-input::placeholder{color:#c4c4c4}
+.form-modal-footer{background:var(--surface2);padding:20px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+
+/* GENERATING */
+.gen-overlay{display:none;position:fixed;inset:0;z-index:500;background:rgba(15,31,61,.97);align-items:center;justify-content:center;flex-direction:column;text-align:center}
+.gen-overlay.active{display:flex}
+.gen-seal{width:80px;height:80px;border:2px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:32px;margin:0 auto 32px;animation:rotateSeal 3s linear infinite}
+@keyframes rotateSeal{to{transform:rotate(360deg)}}
+.gen-title{font-size:24px;font-weight:700;color:#fff;margin-bottom:8px}
+.gen-sub{font-size:14px;color:rgba(255,255,255,.5);font-family:'Inter',sans-serif;margin-bottom:40px}
+.gen-progress{width:320px;height:2px;background:rgba(255,255,255,.1);border-radius:1px;overflow:hidden;margin:0 auto}
+.gen-bar{height:100%;background:var(--gold);width:0;transition:width .4s ease}
+.gen-status{font-size:13px;color:rgba(255,255,255,.4);font-family:'Inter',sans-serif;margin-top:16px;min-height:20px}
+
+/* PREVIEW */
+.preview-overlay{display:none;position:fixed;inset:0;z-index:600;background:rgba(0,0,0,.85);overflow-y:auto;padding:20px}
+.preview-overlay.active{display:block}
+.preview-doc{max-width:760px;margin:0 auto;background:#fff;border-radius:4px;overflow:hidden;box-shadow:0 40px 80px rgba(0,0,0,.5)}
+.preview-header{background:var(--navy);padding:20px 32px;display:flex;align-items:center;justify-content:space-between}
+.preview-doc-body{padding:60px;font-family:'Libre Baskerville',Georgia,serif;font-size:14px;line-height:2;color:#1a1a1a}
+.preview-doc-body h2{font-size:16px;text-align:center;text-transform:uppercase;letter-spacing:3px;margin-bottom:48px;color:#111}
+.preview-doc-body .clause-head{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#555;margin:28px 0 10px}
+.preview-doc-body p{margin-bottom:14px}
+.redacted{background:linear-gradient(transparent 40%,#e5e7eb 40%,#e5e7eb 60%,transparent 60%);background-size:100% 24px;filter:blur(3px);user-select:none;pointer-events:none;opacity:.6;margin:24px 0}
+.unlock-bar{position:sticky;bottom:0;background:linear-gradient(transparent,#fff 40%);padding:60px 60px 32px;text-align:center}
+.unlock-bar h3{font-size:20px;font-weight:700;margin-bottom:8px;color:var(--navy)}
+.unlock-bar p{font-size:14px;color:var(--muted);font-family:'Inter',sans-serif;margin-bottom:24px}
+
+/* TESTIMONIALS */
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.testi-card{background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:32px}
+.testi-stars{color:var(--gold);font-size:14px;margin-bottom:16px;letter-spacing:2px}
+.testi-text{font-size:16px;line-height:1.8;color:var(--text);margin-bottom:24px}
+.testi-meta{font-size:13px;font-family:'Inter',sans-serif}
+.testi-name{font-weight:700;color:var(--navy)}
+.testi-title{color:var(--muted);margin-top:2px}
+.result-pill{display:inline-block;background:rgba(22,163,74,.08);border:1px solid rgba(22,163,74,.2);color:var(--green);font-size:11px;font-weight:700;padding:3px 10px;border-radius:2px;font-family:'Inter',sans-serif;letter-spacing:.5px;text-transform:uppercase;margin-bottom:12px}
+
+/* FOOTER */
+footer{background:var(--navy);padding:60px 40px;color:rgba(255,255,255,.4);font-family:'Inter',sans-serif;font-size:13px}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
+.footer-logo{font-size:22px;font-weight:700;color:#fff;font-family:'Libre Baskerville',serif;margin-bottom:8px}
+.footer-logo span{color:var(--gold)}
+.footer-disc{font-size:12px;color:rgba(255,255,255,.3);max-width:500px;line-height:1.7}
+.footer-links{display:flex;gap:24px}
+.footer-links a{color:rgba(255,255,255,.4)}
+.footer-links a:hover{color:rgba(255,255,255,.7)}
+
+@media(max-width:900px){.hero-inner{grid-template-columns:1fr}.hero-card{display:none}.doc-browser{grid-template-columns:1fr}.doc-sidebar{display:none}}
+@media(max-width:600px){.trust-bar{gap:20px}.nav-links{display:none}nav{padding:0 20px}.section{padding:60px 20px}.hero{padding:100px 20px 60px}}
+
+/* ─────────────────────────────────────────
+   V2 ENGINE ADDITIONS
+───────────────────────────────────────── */
+.doc-card {
+  background: var(--white);
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 24px 20px;
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
+}
+.doc-card:hover {
+  border-color: var(--navy);
+  box-shadow: 0 4px 24px rgba(15,30,60,0.10);
+  transform: translateY(-2px);
+}
+.doc-card-icon { font-size: 22px; margin-bottom: 10px; }
+.doc-card-cat {
+  font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+  color: #6b7280; margin-bottom: 6px;
+}
+.doc-card-name {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 16px; font-weight: 700; color: var(--navy);
+  margin-bottom: 8px; line-height: 1.3;
+}
+.doc-card-desc { font-size: 12px; color: #6b7280; line-height: 1.6; margin-bottom: 14px; }
+.doc-card-cta {
+  font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--navy); font-weight: 600;
+}
+#doc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+.form-doc-badge {
+  display: inline-block;
+  background: #f0f4ff;
+  color: var(--navy);
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 99px;
+  margin-bottom: 12px;
+}
+.form-doc-desc {
+  font-size: 13px; color: #555; line-height: 1.7; margin-bottom: 20px;
+}
+.doc-meta { font-size: 13px; color: #555; font-family: 'Inter', sans-serif; line-height: 1.7; margin-bottom: 20px; }
+[data-reveal] { opacity: 0; transform: translateY(18px); transition: opacity 0.5s ease, transform 0.5s ease; }
+[data-reveal].revealed { opacity: 1; transform: none; }
+
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo-mark">
+    <div class="logo-icon">L</div>
+    <div class="logo-text">Lex<span>Draft</span></div>
+  </div>
+  <div class="nav-links sans">
+    <a href="#documents">Documents</a>
+    <a href="#compare">Compare</a>
+    <a href="#how">How it works</a>
+  </div>
+  <button class="nav-cta" onclick="document.getElementById('documents').scrollIntoView({behavior:'smooth'})">Start Free Preview</button>
+</nav>
+
+<!-- GENERATING -->
+<div class="gen-overlay" id="genOverlay">
+  <div class="gen-seal">⚖</div>
+  <div class="gen-title">Drafting your document</div>
+  <div class="gen-sub sans">Applying your details to the legal framework</div>
+  <div class="gen-progress"><div class="gen-bar" id="genBar"></div></div>
+  <div class="gen-status sans" id="genStatus">Analyzing parties and jurisdiction...</div>
+</div>
+
+<!-- FORM OVERLAY -->
+<div class="form-overlay" id="formOverlay">
+  <div class="form-modal">
+    <div class="form-modal-header">
+      <div class="form-modal-title sans" id="formModalTitle">Customize your document</div>
+      <button class="form-modal-close" onclick="closeForm()">&#x2715;</button>
+    </div>
+    <div class="form-modal-body" id="formModalBody"></div>
+    <div class="form-modal-footer">
+      <div class="sans" style="font-size:13px;color:var(--muted)">Preview free. Pay only to download.</div>
+      <button class="btn-draft sans" onclick="startGenerate()">Preview My Document</button>
+    </div>
+  </div>
+</div>
+
+<!-- PREVIEW OVERLAY -->
+<div class="preview-overlay" id="previewOverlay">
+  <div class="preview-doc">
+    <div class="preview-header">
+      <div class="logo-text" style="font-size:16px">Lex<span>Draft</span></div>
+      <div style="display:flex;gap:12px;align-items:center">
+        <span class="sans" style="font-size:12px;color:rgba(255,255,255,.5)" id="previewLabel"></span>
+        <button onclick="closePreview()" style="background:rgba(255,255,255,.1);border:none;color:#fff;padding:6px 14px;border-radius:3px;cursor:pointer;font-family:Inter,sans-serif;font-size:13px">Close</button>
+      </div>
+    </div>
+    <div class="preview-doc-body" id="previewBody"></div>
+    <div class="unlock-bar">
+      <h3>Your document is ready.</h3>
+      <p class="sans">The rest is waiting for you. Pay once, download the full PDF and editable Word file instantly.</p>
+      <button class="btn-draft" onclick="goToPay()" style="font-size:16px;padding:16px 40px">Unlock Full Document &mdash; $27 &nbsp;&#8594;</button>
+      <p class="sans" style="font-size:12px;color:var(--muted2);margin-top:12px">Secure Stripe checkout &middot; Instant download &middot; No subscription ever</p>
+    </div>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-texture"></div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="eyebrow">Attorney-drafted templates &middot; AI-customized &middot; Instant</div>
+      <h1>Legal documents done <em>right.</em><br>Not $300. <em>$27.</em></h1>
+      <p class="hero-sub">Preview the actual document before you pay anything. Fill in your details, see the full draft, then decide. No account. No subscription. $27 flat.</p>
+      <div class="hero-proof">
+        <div class="proof-item"><div class="proof-dot"></div><span class="sans">See the document before you pay</span></div>
+        <div class="proof-item"><div class="proof-dot"></div><span class="sans">PDF + Word download</span></div>
+        <div class="proof-item"><div class="proof-dot"></div><span class="sans">No account required</span></div>
+        <div class="proof-item"><div class="proof-dot"></div><span class="sans">$27 vs. $300+ elsewhere</span></div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="card-header">
+        <div class="card-title">Choose a document to preview</div>
+      </div>
+      <div class="doc-list">
+        <div class="doc-item" onclick="openForm('nda')"><div><div class="doc-name-s">Non-Disclosure Agreement</div><div class="doc-price-s sans">NDA &middot; $27</div></div><div class="doc-arrow">&#8594;</div></div>
+        <div class="doc-item" onclick="openForm('freelance')"><div><div class="doc-name-s">Freelance Contract</div><div class="doc-price-s sans">Client agreement &middot; $27</div></div><div class="doc-arrow">&#8594;</div></div>
+        <div class="doc-item" onclick="openForm('lease')"><div><div class="doc-name-s">Residential Lease</div><div class="doc-price-s sans">Rental agreement &middot; $27</div></div><div class="doc-arrow">&#8594;</div></div>
+        <div class="doc-item" onclick="openForm('llc')"><div><div class="doc-name-s">LLC Operating Agreement</div><div class="doc-price-s sans">Business formation &middot; $27</div></div><div class="doc-arrow">&#8594;</div></div>
+        <div class="doc-item" onclick="openForm('contractor')"><div><div class="doc-name-s">Independent Contractor</div><div class="doc-price-s sans">1099 agreement &middot; $27</div></div><div class="doc-arrow">&#8594;</div></div>
+        <div class="doc-item" onclick="openForm('brand_collab')"><div><div class="doc-name-s">Brand Collaboration</div><div class="doc-price-s sans">Creator agreement &middot; $27</div></div><div class="doc-arrow">&#8594;</div></div>
+        <div class="doc-item" onclick="openForm('website_dev')"><div><div class="doc-name-s">Website Dev Contract</div><div class="doc-price-s sans">Developer agreement &middot; $27</div></div><div class="doc-arrow">&#8594;</div></div>
+        <div class="doc-item" onclick="openForm('ip_assignment')"><div><div class="doc-name-s">IP Assignment</div><div class="doc-price-s sans">Transfer IP rights &middot; $27</div></div><div class="doc-arrow">&#8594;</div></div>
+      </div>
+      <div class="card-footer">
+        <div class="cf-text sans">15 document types available</div>
+        <div class="cf-vs sans">vs. <strong>$130-300</strong> at LegalZoom</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item-bar">&#10003; Preview before you pay</div>
+  <div class="trust-item-bar">&#10003; Attorney-drafted templates</div>
+  <div class="trust-item-bar">&#10003; $27 flat &mdash; no subscription</div>
+  <div class="trust-item-bar">&#10003; PDF + Word instant download</div>
+  <div class="trust-item-bar">&#10003; No account required</div>
+</div>
+
+<!-- COMPARE — THE MOAT -->
+<div style="background:#fff;padding:100px 40px" id="compare">
+  <div style="max-width:1000px;margin:0 auto">
+    <div class="section-eyebrow">Why LexDraft</div>
+    <h2 class="section-title">The only one that shows you the document before you pay.</h2>
+    <p class="section-sub sans">LegalZoom and Rocket Lawyer collect your money first. You find out what you got later. We show you the full draft upfront. That's the difference.</p>
+    <div style="overflow-x:auto">
+    <table class="compare-table sans">
+      <thead>
+        <tr>
+          <th style="width:35%">Feature</th>
+          <th class="lex" style="width:25%">LexDraft</th>
+          <th>LegalZoom</th>
+          <th>Rocket Lawyer</th>
+          <th>Free Templates</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Preview document before paying</td>
+          <td class="lex-col"><span class="check-gold">&#10003;</span> Full preview</td>
+          <td><span class="x-red">&#10007;</span> Pay first</td>
+          <td><span class="x-red">&#10007;</span> Pay first</td>
+          <td><span class="check-gray">Sometimes</span></td>
+        </tr>
+        <tr>
+          <td>Price per document</td>
+          <td class="lex-col" style="color:var(--green);font-weight:700">$27</td>
+          <td>$130 &ndash; $250</td>
+          <td>$40/month required</td>
+          <td>Free (generic)</td>
+        </tr>
+        <tr>
+          <td>Customized to your details</td>
+          <td class="lex-col"><span class="check-gold">&#10003;</span></td>
+          <td><span class="check-gray">&#10003;</span></td>
+          <td><span class="check-gray">&#10003;</span></td>
+          <td><span class="x-red">&#10007;</span> You fill it in manually</td>
+        </tr>
+        <tr>
+          <td>PDF + editable Word file</td>
+          <td class="lex-col"><span class="check-gold">&#10003;</span> Both included</td>
+          <td>PDF only</td>
+          <td>Both (with subscription)</td>
+          <td>Varies</td>
+        </tr>
+        <tr>
+          <td>Account required</td>
+          <td class="lex-col" style="color:var(--green);font-weight:700">No account ever</td>
+          <td>Required</td>
+          <td>Required</td>
+          <td>Often required</td>
+        </tr>
+        <tr>
+          <td>Plain-English clause explanations</td>
+          <td class="lex-col"><span class="check-gold">&#10003;</span></td>
+          <td><span class="x-red">&#10007;</span></td>
+          <td><span class="x-red">&#10007;</span></td>
+          <td><span class="x-red">&#10007;</span></td>
+        </tr>
+        <tr>
+          <td>Subscription / recurring charge</td>
+          <td class="lex-col" style="color:var(--green);font-weight:700">Never</td>
+          <td>Upsells heavily</td>
+          <td>$40/mo required</td>
+          <td>No</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</div>
+
+<!-- DOCUMENTS -->
+<div style="background:var(--bg);padding:100px 40px" id="documents">
+  <div style="max-width:1100px;margin:0 auto">
+    <div class="section-eyebrow">Document Library</div>
+    <h2 class="section-title">12 document types. All $27.</h2>
+    <div class="doc-browser" id="docBrowser">
+      <div class="doc-sidebar">
+        <div class="doc-sidebar-header">All Documents</div>
+        <div id="docSidebarList"></div>
+      </div>
+      <div class="doc-main" id="docMainPanel">
+        <div class="doc-main-title">Select a document</div>
+        <div class="doc-main-desc sans">Choose from the list on the left to see what's included, what to expect, and preview a sample.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<div style="background:var(--navy);padding:100px 40px" id="how">
+  <div style="max-width:900px;margin:0 auto">
+    <div class="section-eyebrow">How It Works</div>
+    <h2 class="section-title" style="color:#fff">Four steps. Under two minutes.</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:32px;margin-top:48px">
+      <div>
+        <div style="font-size:40px;font-weight:700;color:rgba(201,168,76,.2);margin-bottom:16px">01</div>
+        <div style="font-size:17px;font-weight:700;color:#fff;margin-bottom:10px">Pick your document</div>
+        <div style="font-size:14px;color:rgba(255,255,255,.5);line-height:1.7;font-family:Inter,sans-serif">12 types. NDA to LLC agreement. All covered.</div>
+      </div>
+      <div>
+        <div style="font-size:40px;font-weight:700;color:rgba(201,168,76,.2);margin-bottom:16px">02</div>
+        <div style="font-size:17px;font-weight:700;color:#fff;margin-bottom:10px">Fill in your details</div>
+        <div style="font-size:14px;color:rgba(255,255,255,.5);line-height:1.7;font-family:Inter,sans-serif">Plain questions. No legal knowledge needed. Takes 60 seconds.</div>
+      </div>
+      <div>
+        <div style="font-size:40px;font-weight:700;color:rgba(201,168,76,.2);margin-bottom:16px">03</div>
+        <div style="font-size:17px;font-weight:700;color:#fff;margin-bottom:10px">Preview free</div>
+        <div style="font-size:14px;color:rgba(255,255,255,.5);line-height:1.7;font-family:Inter,sans-serif">See the actual document before paying. Nobody else does this.</div>
+      </div>
+      <div>
+        <div style="font-size:40px;font-weight:700;color:rgba(201,168,76,.2);margin-bottom:16px">04</div>
+        <div style="font-size:17px;font-weight:700;color:#fff;margin-bottom:10px">Pay $27. Download.</div>
+        <div style="font-size:14px;color:rgba(255,255,255,.5);line-height:1.7;font-family:Inter,sans-serif">PDF + Word. Yours instantly. No account. No subscription.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TESTIMONIALS -->
+<div style="background:#fff;padding:100px 40px">
+  <div style="max-width:1100px;margin:0 auto">
+    <div class="section-eyebrow">Results</div>
+    <h2 class="section-title">People who stopped paying lawyer prices.</h2>
+    <div class="testi-grid" style="margin-top:48px">
+      <div class="testi-card">
+        <div class="result-pill">saved $273</div>
+        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="testi-text">"I needed an NDA for a new contractor and my lawyer quoted me $300. Found LexDraft, had the same document in my inbox in 5 minutes for $27. I previewed the whole thing before I paid. That sold me."</div>
+        <div class="testi-meta"><div class="testi-name">Marcus T.</div><div class="testi-title sans">Marketing consultant, Chicago</div></div>
+      </div>
+      <div class="testi-card">
+        <div class="result-pill">landlord of 3 properties</div>
+        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="testi-text">"I own three rental properties and was spending $400-500 a year just getting lease agreements drafted. LexDraft paid for itself the first time I used it. The document is cleaner than what my attorney was sending me."</div>
+        <div class="testi-meta"><div class="testi-name">Diana K.</div><div class="testi-title sans">Property owner, Austin TX</div></div>
+      </div>
+      <div class="testi-card">
+        <div class="result-pill">freelancer, 6 NDAs last year</div>
+        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="testi-text">"Every new client wants an NDA. I used to send the same generic template I found online and hope for the best. Now I generate a proper one with their name, the project scope, the right state law. It takes 2 minutes. $27 is nothing."</div>
+        <div class="testi-meta"><div class="testi-name">Alex R.</div><div class="testi-title sans">UX designer, freelance</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FINAL CTA -->
+<div style="background:var(--navy);padding:100px 40px;text-align:center">
+  <div style="max-width:600px;margin:0 auto">
+    <div class="section-eyebrow" style="text-align:center">Get started</div>
+    <h2 style="font-size:clamp(32px,5vw,52px);font-weight:700;color:#fff;letter-spacing:-1px;margin-bottom:20px">Preview your document now. Free.</h2>
+    <p style="color:rgba(255,255,255,.5);font-size:18px;line-height:1.7;margin-bottom:40px;font-family:Inter,sans-serif">Pick your document, fill in your details, and see the actual draft before you decide to pay anything.</p>
+    <button class="btn-gold sans" style="font-size:17px;padding:18px 48px" onclick="document.getElementById('documents').scrollIntoView({behavior:'smooth'})">Choose My Document</button>
+    <p style="font-size:13px;color:rgba(255,255,255,.3);margin-top:16px;font-family:Inter,sans-serif">$27 per document &middot; No account &middot; No subscription &middot; Instant download</p>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">Lex<span>Draft</span></div>
+      <div class="footer-disc">LexDraft provides AI-customized legal document templates. Documents are not a substitute for licensed legal counsel in complex matters. For straightforward agreements, our templates are based on attorney-drafted frameworks used across the United States.</div>
+    </div>
+    <div class="footer-links">
+      <a href="mailto:hello@lexdraft.co">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ═══════════════════════════════════════════════════════════
+//  LexDraft — Intelligent Document Engine v2.0
+//  Every clause adapts to user's actual inputs.
+//  No static templates. No generic filler.
+// ═══════════════════════════════════════════════════════════
+
+const STRIPE_SINGLE      = 'https://buy.stripe.com/3cI8wP8ZrgEd6nk9pL8IU1h';
+const STRIPE_CREATOR     = 'https://buy.stripe.com/3cI8wP8ZrgEd6nk9pL8IU1h';
+const STRIPE_STARTER     = 'https://buy.stripe.com/5kQcN5grT1Jj3b8dG18IU1i';
+const STRIPE_LLC_KIT     = 'https://buy.stripe.com/4gM7sL5Nfew5274atP8IU1x';
+const STRIPE_FREELANCER  = 'https://buy.stripe.com/8x2fZhdfH9bL5jggSd8IU1A';
+const STRIPE_VAULT       = 'https://buy.stripe.com/4gMeVdcbDgEd8vs8lH8IU1j';
+
+// ─── DOCUMENT DEFINITIONS ────────────────────────────────────────
+const DOCS = [
+  {
+    id: 'nda', cat: 'Business', name: 'Non-Disclosure Agreement', icon: '⚖',
+    desc: 'Protects confidential information shared between two parties. Fully customized to your specific relationship, industry, and purpose — not a generic template.',
+    includes: ['Purpose-specific confidentiality scope','Industry-tailored definition of what\'s protected','Mutual or one-way structure based on your situation','Duration matched to your timeline','Governing state law applied correctly','Signatures, carve-outs, and remedy clauses'],
+    fields: [
+      {id:'disclosing', label:'Your name or company', ph:'Acme Corp'},
+      {id:'receiving',  label:'Other party name or company', ph:'John Doe or Partner LLC'},
+      {id:'purpose',    label:'What you\'re sharing information about', ph:'e.g. website build, software deal, product partnership, acquisition discussion'},
+      {id:'industry',   label:'Your industry', ph:'e.g. Tech, Real Estate, Healthcare, Creative Services'},
+      {id:'duration',   label:'How long confidentiality should last', ph:'2 years'},
+      {id:'state',      label:'Which state governs', ph:'California'}
+    ]
+  },
+  {
+    id: 'freelance', cat: 'Freelance', name: 'Freelance Contract', icon: '💼',
+    desc: 'Client service agreement for designers, developers, writers, consultants — customized to your actual services, rate, and client. Not a fill-in-the-blank.',
+    includes: ['Scope defined from your actual services','Payment schedule + late payment enforcement','IP ownership tied to payment completion','Revision limits and scope creep protection','Kill fee if client cancels','Independent contractor classification'],
+    fields: [
+      {id:'freelancer', label:'Your name or business', ph:'Jane Smith Design'},
+      {id:'client',     label:'Client name or company', ph:'StartupXYZ Inc.'},
+      {id:'services',   label:'Exactly what you\'re delivering', ph:'e.g. Brand identity design, 3 logo concepts, style guide, 2 revision rounds'},
+      {id:'rate',       label:'Total project fee or hourly rate', ph:'$4,500 total'},
+      {id:'terms',      label:'Payment schedule', ph:'50% upfront, 50% on delivery'},
+      {id:'revisions',  label:'How many revision rounds are included', ph:'2 rounds'},
+      {id:'deadline',   label:'Project deadline or timeline', ph:'4 weeks from kickoff'},
+      {id:'state',      label:'Which state governs', ph:'New York'}
+    ]
+  },
+  {
+    id: 'lease', cat: 'Real Estate', name: 'Residential Lease Agreement', icon: '🏠',
+    desc: 'Full residential lease for renting a home, apartment, or condo. Every clause adapted to your property type, rent amount, and jurisdiction.',
+    includes: ['Property description and permitted use','Rent, due date, and late fees','Security deposit and return conditions','Maintenance responsibilities split clearly','Pet, subletting, guest policies','Early termination and notice requirements'],
+    fields: [
+      {id:'landlord',  label:'Landlord full name', ph:'Robert Chen'},
+      {id:'tenant',    label:'Tenant full name(s)', ph:'Sarah Williams'},
+      {id:'address',   label:'Full property address', ph:'123 Oak St, Austin TX 78701'},
+      {id:'type',      label:'Property type', ph:'e.g. apartment, house, condo, studio'},
+      {id:'rent',      label:'Monthly rent amount', ph:'1,850'},
+      {id:'deposit',   label:'Security deposit amount', ph:'1,850'},
+      {id:'start',     label:'Lease start date', ph:'June 1, 2026'},
+      {id:'term',      label:'Lease length', ph:'12 months'},
+      {id:'pets',      label:'Pets allowed?', ph:'No pets / Cats allowed / Dogs under 30 lbs'}
+    ]
+  },
+  {
+    id: 'llc', cat: 'Business', name: 'LLC Operating Agreement', icon: '🏢',
+    desc: 'Governs how your LLC runs. Ownership, voting, profits, exit. Customized to your number of members, management structure, and state of formation.',
+    includes: ['Member ownership percentages','Voting rights and decision thresholds','Profit/loss distribution schedule','Manager vs. member-managed structure','Member departure and buyout procedures','Dissolution and wind-down process'],
+    fields: [
+      {id:'llc_name',  label:'LLC legal name', ph:'Bright Ideas LLC'},
+      {id:'state',     label:'State of formation', ph:'Delaware'},
+      {id:'members',   label:'All members and ownership %', ph:'Jane Smith 60%, Bob Lee 40%'},
+      {id:'purpose',   label:'Business purpose (what the LLC does)', ph:'Software development and consulting services'},
+      {id:'manager',   label:'Managing member (who runs day-to-day)', ph:'Jane Smith'},
+      {id:'profits',   label:'When profits are distributed', ph:'Quarterly / Monthly / Annually'}
+    ]
+  },
+  {
+    id: 'contractor', cat: 'Freelance', name: 'Independent Contractor Agreement', icon: '🔧',
+    desc: 'For 1099 contractor relationships. Scope, pay, IP ownership, and classification language — adapted to your specific engagement type and industry.',
+    includes: ['Specific project scope and deliverables','Compensation and payment schedule','IP assignment — who owns the work','Contractor classification language','Confidentiality obligations','Non-solicitation clause'],
+    fields: [
+      {id:'company',    label:'Hiring company or individual', ph:'BuildFast Inc.'},
+      {id:'contractor', label:'Contractor\'s name', ph:'Dave Torres'},
+      {id:'work',       label:'Exactly what the contractor is doing', ph:'e.g. Building a Shopify storefront, 3 pages, mobile-optimized'},
+      {id:'pay',        label:'Compensation structure', ph:'$8,000 project fee'},
+      {id:'timeline',   label:'Project timeline', ph:'8 weeks'},
+      {id:'ip',         label:'Who should own the final work?', ph:'Client owns everything / Contractor retains until paid'},
+      {id:'state',      label:'Governing state', ph:'Florida'}
+    ]
+  },
+  {
+    id: 'employment', cat: 'Business', name: 'Employment Agreement', icon: '👔',
+    desc: 'Formal employment terms for a new hire. Role, compensation, start date, IP assignment, and at-will status — all customized to the actual position.',
+    includes: ['Job title, duties, and reporting structure','Salary, bonus, and benefits summary','At-will employment clause','IP assignment and invention disclosure','Non-compete and non-solicitation (where enforceable)','Confidentiality obligations'],
+    fields: [
+      {id:'employer',   label:'Company name', ph:'Acme Corp'},
+      {id:'employee',   label:'Employee full name', ph:'Alex Johnson'},
+      {id:'title',      label:'Job title and department', ph:'Senior Developer, Engineering'},
+      {id:'duties',     label:'Primary responsibilities', ph:'e.g. Build and maintain web applications, lead code reviews'},
+      {id:'salary',     label:'Annual salary or hourly rate', ph:'$85,000/year'},
+      {id:'benefits',   label:'Benefits included', ph:'Health insurance, 15 days PTO, equipment stipend'},
+      {id:'start',      label:'Start date', ph:'June 1, 2026'},
+      {id:'state',      label:'State of employment', ph:'California'}
+    ]
+  },
+  {
+    id: 'promissory', cat: 'Personal', name: 'Promissory Note', icon: '💵',
+    desc: 'A legally binding loan agreement. Amount, interest, repayment schedule, and default consequences — customized to your actual loan terms.',
+    includes: ['Loan amount and disbursement date','Interest rate (or zero-interest declaration)','Repayment schedule (monthly, lump sum, etc.)','Late payment and default consequences','Acceleration clause','Governing law and notarization guidance'],
+    fields: [
+      {id:'lender',    label:'Lender\'s full name', ph:'Sarah Williams'},
+      {id:'borrower',  label:'Borrower\'s full name', ph:'Mike Davis'},
+      {id:'amount',    label:'Loan amount ($)', ph:'5,000'},
+      {id:'interest',  label:'Interest rate', ph:'0% (interest-free) or 5% annually'},
+      {id:'repayment', label:'How it gets paid back', ph:'$500/month for 10 months starting July 1'},
+      {id:'purpose',   label:'What the loan is for (optional)', ph:'Business startup costs'},
+      {id:'date',      label:'Agreement date', ph:'June 1, 2026'}
+    ]
+  },
+  {
+    id: 'partnership', cat: 'Business', name: 'Partnership Agreement', icon: '🤝',
+    desc: 'Governs a general business partnership. Contributions, profit sharing, decision-making authority, and exit — tailored to your actual business and partner structure.',
+    includes: ['Partner capital and time contributions','Profit and loss sharing percentages','Decision-making authority and veto rights','Banking and financial controls','Dispute resolution process','Exit and dissolution procedures'],
+    fields: [
+      {id:'p1',      label:'Partner 1 name', ph:'Alex Chen'},
+      {id:'p2',      label:'Partner 2 name', ph:'Jamie Rivera'},
+      {id:'biz',     label:'Business name', ph:'Chen Rivera Consulting'},
+      {id:'purpose', label:'What the business does', ph:'Digital marketing agency'},
+      {id:'split',   label:'Profit/loss split', ph:'50/50 or 60/40'},
+      {id:'capital', label:'Each partner\'s initial contribution', ph:'Alex: $10K cash | Jamie: $10K + equipment'},
+      {id:'state',   label:'Governing state', ph:'Texas'}
+    ]
+  },
+  {
+    id: 'consulting', cat: 'Freelance', name: 'Consulting Agreement', icon: '🎯',
+    desc: 'For consultants on retainer or project basis. Scope, fees, confidentiality, and IP boundaries — adapted to your specific consulting engagement.',
+    includes: ['Specific consulting scope and deliverables','Retainer or project fee structure','Expense reimbursement terms','Confidentiality and non-disclosure','Independent contractor classification','Term, renewal, and termination'],
+    fields: [
+      {id:'consultant', label:'Your name or firm', ph:'Strategic Minds LLC'},
+      {id:'client',     label:'Client company', ph:'TechStart Inc.'},
+      {id:'scope',      label:'What you\'re being engaged to do', ph:'e.g. Go-to-market strategy, 90-day engagement, weekly calls + deliverables'},
+      {id:'fee',        label:'Your fee structure', ph:'$5,000/month retainer or $150/hour'},
+      {id:'expenses',   label:'Expenses covered by client?', ph:'Travel, software tools up to $200/month'},
+      {id:'term',       label:'Length of engagement', ph:'6 months with 30-day renewal option'},
+      {id:'state',      label:'Governing state', ph:'New York'}
+    ]
+  },
+  {
+    id: 'room', cat: 'Real Estate', name: 'Room Rental Agreement', icon: '🌙',
+    desc: 'For renting a room in your home. Covers rent, shared spaces, house rules, and move-out terms — adapted to your specific arrangement.',
+    includes: ['Room and common area access rights','Monthly rent and utilities split','House rules tailored to your situation','Quiet hours, guest, and parking policies','Notice requirements','Security deposit terms'],
+    fields: [
+      {id:'owner',   label:'Homeowner/primary tenant name', ph:'Lisa Park'},
+      {id:'renter',  label:'Renter\'s full name', ph:'Tom Bradley'},
+      {id:'address', label:'Property address', ph:'456 Oak Ave, Denver CO 80203'},
+      {id:'room',    label:'Which room and what\'s included', ph:'Master bedroom, private bath, shared kitchen/living room'},
+      {id:'rent',    label:'Monthly rent', ph:'900'},
+      {id:'utilities', label:'How utilities are handled', ph:'Included in rent / split 50-50 / renter pays own electricity'},
+      {id:'rules',   label:'Key house rules', ph:'No smoking, no overnight guests on weeknights, quiet after 10pm'},
+      {id:'start',   label:'Start date', ph:'June 1, 2026'}
+    ]
+  },
+  {
+    id: 'cease', cat: 'Personal', name: 'Cease & Desist Letter', icon: '🚫',
+    desc: 'Formal legal demand to stop infringing your rights — copyright, trademark, contract violation, harassment. Customized to your specific situation and legal basis.',
+    includes: ['Clear identification of the violation','Legal basis for your demand (IP, contract, etc.)','Specific actions required to cure the violation','Compliance deadline','Consequences of non-compliance','Your contact information and representation notice'],
+    fields: [
+      {id:'sender',    label:'Your name or company', ph:'Jane Doe'},
+      {id:'recipient', label:'Their name or company', ph:'Infringing Party LLC'},
+      {id:'violation', label:'Exactly what they\'re doing wrong', ph:'e.g. Using my logo and brand name on their website without license'},
+      {id:'legal_basis', label:'Your legal basis', ph:'e.g. Federal copyright / Trademark registration / Breach of contract / Harassment'},
+      {id:'demand',    label:'Exactly what you\'re demanding they do', ph:'Remove all infringing materials and cease all use immediately'},
+      {id:'deadline',  label:'Response deadline', ph:'14 days from receipt'}
+    ]
+  },
+  {
+    id: 'saas', cat: 'Business', name: 'SaaS Terms of Service', icon: '💻',
+    desc: 'Terms of service for a software product or platform. User rights, payment, data, liability limits — customized to your actual product and business model.',
+    includes: ['User rights, restrictions, and acceptable use','Subscription/payment and refund terms','Data ownership and privacy policy reference','Service availability and uptime disclaimers','Limitation of liability','Termination and account deletion process'],
+    fields: [
+      {id:'company',      label:'Your company name', ph:'AppCo Inc.'},
+      {id:'product',      label:'Product or service name', ph:'TaskFlow'},
+      {id:'what_it_does', label:'What your product does', ph:'e.g. Project management software for remote teams'},
+      {id:'website',      label:'Your website URL', ph:'https://taskflow.io'},
+      {id:'pricing',      label:'Pricing model', ph:'e.g. $29/month subscription, free tier available'},
+      {id:'jurisdiction', label:'Governing state', ph:'Delaware'},
+      {id:'email',        label:'Legal contact email', ph:'legal@taskflow.io'}
+    ]
+  },
+  {
+    id: 'ip_assignment', cat: 'Business', name: 'IP Assignment Agreement', icon: '©',
+    desc: 'Transfers ownership of intellectual property from creator to company or buyer. Essential for founders, contractors, and anyone transferring creative or technical work.',
+    includes: ['Specific IP being transferred','Scope of rights assigned (full vs. limited)','Consideration paid for assignment','Moral rights waiver','Warranties of ownership','Governing law and recordation guidance'],
+    fields: [
+      {id:'assignor',   label:'Who\'s transferring the IP (creator/owner)', ph:'Jane Smith'},
+      {id:'assignee',   label:'Who\'s receiving the IP (company/buyer)', ph:'Acme Corp'},
+      {id:'ip_desc',    label:'What IP is being transferred', ph:'e.g. Source code for mobile app, logo design, patent application No. X, manuscript'},
+      {id:'ip_type',    label:'Type of IP', ph:'e.g. Software, Trademark, Copyright, Patent, Trade Secret'},
+      {id:'consideration', label:'What\'s being paid for the transfer', ph:'$5,000 / included in employment / $1 and other good consideration'},
+      {id:'state',      label:'Governing state', ph:'California'}
+    ]
+  },
+  {
+    id: 'brand_collab', cat: 'Creator', name: 'Brand Collaboration Agreement', icon: '🎬',
+    desc: 'For creators, influencers, and UGC producers working with brands. Covers deliverables, usage rights, exclusivity, payment, and FTC compliance.',
+    includes: ['Content deliverables and approval process','Usage rights — platforms, duration, exclusivity','Compensation and payment timeline','FTC disclosure requirements','Revision and rejection rights','Termination and kill fee'],
+    fields: [
+      {id:'creator',      label:'Your name or creator entity', ph:'@YourHandle / Your Name LLC'},
+      {id:'brand',        label:'Brand or company name', ph:'Nike, Acme Products, etc.'},
+      {id:'deliverables', label:'What content you\'re creating', ph:'e.g. 3 Instagram Reels, 2 TikTok videos, 5 UGC raw files'},
+      {id:'usage',        label:'How the brand can use your content', ph:'e.g. Paid social ads for 12 months, Instagram and TikTok only'},
+      {id:'exclusivity',  label:'Any exclusivity restriction', ph:'e.g. No competing brands for 30 days / No exclusivity'},
+      {id:'rate',         label:'Your total fee', ph:'$2,500 flat fee'},
+      {id:'payment',      label:'When you get paid', ph:'50% on signing, 50% on final delivery'},
+      {id:'revisions',    label:'Revision rounds included', ph:'2 rounds'},
+      {id:'state',        label:'Governing state', ph:'California'}
+    ]
+  },
+  {id:'website_dev', cat: 'Freelance', name: 'Website Development Contract', icon: '🖥',
+    desc: 'For web developers and agencies. Defines exactly what gets built, who owns it, how revisions work, and what happens at launch. No scope creep.',
+    includes: ['Detailed project scope and deliverables','Tech stack and hosting responsibilities','Payment milestones tied to project phases','IP ownership on full payment','Revision rounds and out-of-scope process','Launch handoff and post-launch support terms'],
+    fields: [
+      {id:'developer',  label:'Developer or agency name', ph:'Code & Craft Studio'},
+      {id:'client',     label:'Client name or company', ph:'Bloom Wellness Co.'},
+      {id:'scope',      label:'What you\'re building (be specific)', ph:'e.g. 5-page Webflow site: Home, About, Services, Blog, Contact — mobile responsive, SEO setup, contact form'},
+      {id:'stack',      label:'Tech stack / platform', ph:'e.g. Webflow, Shopify, WordPress, React/Next.js'},
+      {id:'rate',       label:'Total project fee', ph:'$6,000'},
+      {id:'milestones', label:'Payment milestones', ph:'$2,000 on signing, $2,000 on design approval, $2,000 on launch'},
+      {id:'revisions',  label:'Revision rounds included', ph:'2 design revisions, 1 dev revision'},
+      {id:'timeline',   label:'Project timeline', ph:'6 weeks from kickoff'},
+      {id:'hosting',    label:'Who handles hosting after launch', ph:'Client manages own hosting / Developer maintains for 30 days'},
+      {id:'state',      label:'Governing state', ph:'New York'}
+    ]
+  }
+];
+
+// ─── STATE ────────────────────────────────────────────────────────
+let currentDoc   = null;
+let currentFormData = {};
+
+// ─── UTILITIES ───────────────────────────────────────────────────
+function today() {
+  return new Date().toLocaleDateString('en-US', {year:'numeric', month:'long', day:'numeric'});
+}
+
+function titleCase(str) {
+  if (!str) return str;
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+// Intelligently infer contract type/tone from purpose field
+function inferContext(data) {
+  const all = Object.values(data).join(' ').toLowerCase();
+  const purpose = (data.purpose || data.scope || data.work || data.services || data.what_it_does || '').toLowerCase();
+
+  const ctx = {
+    isTech: /software|app|website|code|develop|saas|platform|api|digital|tech|mobile|web|ui|ux|design|ai|ml|data|cloud/.test(all),
+    isCreative: /design|brand|logo|video|photo|content|creative|film|edit|illustrat|art|music|podcast|media/.test(all),
+    isConsulting: /strateg|consult|adviso|mentor|coach|business plan|market|research|audit/.test(all),
+    isMarketing: /marketing|seo|ads|social|campaign|email|copywrite|blog|influenc|ugc|tiktok|instagram/.test(all),
+    isRealEstate: /properti|real estate|rent|lease|landlord|tenant|house|apartment|condo|invest/.test(all),
+    isFinancial: /financ|invest|fund|capital|equity|loan|borrow|accounting|bookkeep/.test(all),
+    isHealth: /health|medical|dental|therapy|wellness|fitness|nutrition|clinic|patient|hipaa/.test(all),
+    isLegal: /legal|law|attorney|compli|contract|agreement|intellectual|patent|trademark/.test(all),
+    purposeSummary: purpose || (data.work) || (data.services) || (data.scope) || ''
+  };
+  return ctx;
+}
+
+// ─── DOCUMENT PREVIEW BUILDERS ───────────────────────────────────
+// Each builder uses ALL form fields to generate a fully contextual,
+// accurate, and specific preview. No generic filler.
+
+function buildNDA(d) {
+  const ctx = inferContext(d);
+  const purposeText = d.purpose || '[purpose of disclosure]';
+  const industryText = d.industry ? ` in the ${d.industry} industry` : '';
+
+  // Tailor the confidential information definition to the actual industry/purpose
+  let ciExamples = 'business plans, financial projections, customer data, and trade secrets';
+  if (ctx.isTech) ciExamples = 'source code, technical architecture, API specifications, product roadmaps, customer data, proprietary algorithms, and database schemas';
+  if (ctx.isCreative) ciExamples = 'creative concepts, unreleased designs, brand strategies, campaign materials, client lists, and proprietary creative processes';
+  if (ctx.isMarketing) ciExamples = 'marketing strategies, customer acquisition data, campaign performance, audience targeting parameters, and client relationships';
+  if (ctx.isRealEstate) ciExamples = 'property valuations, deal structures, investor identities, financial modeling, and transaction terms';
+  if (ctx.isHealth) ciExamples = 'patient data, clinical protocols, research findings, proprietary treatment methods, and HIPAA-protected information';
+  if (ctx.isFinancial) ciExamples = 'financial models, investment theses, fund structures, investor identities, and non-public transaction information';
+
+  // Tailor obligations based on context
+  let additionalObligation = '';
+  if (ctx.isHealth) additionalObligation = '<p>Receiving Party acknowledges that certain Confidential Information may be subject to additional protections under HIPAA and applicable healthcare privacy laws, and agrees to comply with all such requirements.</p>';
+  if (ctx.isTech) additionalObligation = '<p>Receiving Party shall not attempt to reverse engineer, decompile, or disassemble any software, code, or technical materials disclosed under this Agreement.</p>';
+  if (ctx.isFinancial) additionalObligation = '<p>Receiving Party shall not use any Confidential Information to trade in securities, make investment decisions for third parties, or otherwise exploit material non-public information in violation of applicable securities law.</p>';
+
+  return `<h2>Non-Disclosure Agreement</h2>
+<p class="doc-meta">This Non-Disclosure Agreement (this "Agreement") is entered into as of <strong>${today()}</strong>, by and between <strong>${d.disclosing||'[Disclosing Party]'}</strong> ("Disclosing Party") and <strong>${d.receiving||'[Receiving Party]'}</strong> ("Receiving Party") (collectively, the "Parties").</p>
+
+<div class="clause-head">1. Purpose</div>
+<p>The Parties wish to explore a potential business relationship in connection with <strong>${purposeText}</strong>${industryText} (the "Purpose"). In furtherance of the Purpose, Disclosing Party may disclose to Receiving Party certain confidential, proprietary, and sensitive information that Disclosing Party regards as competitively sensitive and commercially valuable.</p>
+
+<div class="clause-head">2. Definition of Confidential Information</div>
+<p>"Confidential Information" means any information or data disclosed by Disclosing Party to Receiving Party${industryText ? ` in connection with the ${d.industry} engagement` : ''}, whether in written, oral, visual, electronic, or any other form, including without limitation: <strong>${ciExamples}</strong>, and any other information that a reasonable person in the industry would understand to be proprietary or confidential.</p>
+<p>"Confidential Information" does not include information that: (i) is or becomes publicly known through no breach of this Agreement; (ii) was rightfully known by Receiving Party before disclosure; (iii) is independently developed by Receiving Party without use of Confidential Information; or (iv) is required to be disclosed by law or court order, provided Receiving Party gives prompt prior written notice to Disclosing Party.</p>
+
+<div class="clause-head">3. Obligations of Receiving Party</div>
+<p>Receiving Party agrees to: (a) hold all Confidential Information in strict confidence, using no less than the same degree of care used to protect its own confidential information, but in no event less than reasonable care; (b) not disclose any Confidential Information to any third party without prior written consent of Disclosing Party; (c) use Confidential Information solely for the Purpose described above and for no other purpose; (d) limit access to Confidential Information to employees and contractors who have a need to know and who are bound by confidentiality obligations at least as protective as this Agreement; (e) promptly notify Disclosing Party upon becoming aware of any actual or suspected unauthorized disclosure or use.</p>
+${additionalObligation}
+
+<div class="redacted">
+<div class="clause-head">4. Term and Survival</div>
+<p>This Agreement shall remain in full force and effect for a period of <strong>${d.duration||'2 years'}</strong> from the date first written above. Notwithstanding the foregoing, obligations with respect to trade secrets shall survive termination of this Agreement for as long as such information qualifies as a trade secret under applicable law.</p>
+
+<div class="clause-head">5. Return or Destruction of Information</div>
+<p>Upon written request by Disclosing Party or upon termination of this Agreement, Receiving Party shall promptly return or destroy all tangible materials containing or reflecting Confidential Information, and shall certify in writing that such destruction has been completed.</p>
+
+<div class="clause-head">6. No License or Warranty</div>
+<p>Nothing in this Agreement grants Receiving Party any license, right, title, or interest in or to any Confidential Information or any intellectual property of Disclosing Party. All Confidential Information is provided "as is" without warranty of any kind.</p>
+
+<div class="clause-head">7. Injunctive Relief</div>
+<p>The Parties acknowledge that a breach of this Agreement would cause irreparable harm for which monetary damages would be an inadequate remedy, and that injunctive relief and specific performance are appropriate remedies for any threatened or actual breach.</p>
+
+<div class="clause-head">8. Governing Law and Dispute Resolution</div>
+<p>This Agreement shall be governed by and construed in accordance with the laws of the State of <strong>${d.state||'[State]'}</strong>, without regard to its conflict of laws principles. Any dispute arising under this Agreement shall be resolved in the courts of <strong>${d.state||'[State]'}</strong>.</p>
+
+<div class="clause-head">9. Entire Agreement</div>
+<p>This Agreement constitutes the entire agreement between the Parties with respect to its subject matter and supersedes all prior or contemporaneous discussions, representations, or agreements.</p>
+
+<div class="clause-head">10. Signatures</div>
+<p>IN WITNESS WHEREOF, the Parties have executed this Non-Disclosure Agreement as of the date first written above.</p>
+<p style="margin-top:32px">Signed: ___________________________ &nbsp;&nbsp; Date: ___________<br/><strong>${d.disclosing||'Disclosing Party'}</strong></p>
+<p style="margin-top:24px">Signed: ___________________________ &nbsp;&nbsp; Date: ___________<br/><strong>${d.receiving||'Receiving Party'}</strong></p>
+</div>`;
+}
+
+function buildFreelance(d) {
+  const ctx = inferContext(d);
+  const revText = d.revisions ? `${d.revisions} rounds` : '2 rounds';
+  const deadlineText = d.deadline || '[timeline]';
+
+  let scopeNotes = '';
+  if (ctx.isTech) scopeNotes = '<p>For the avoidance of doubt, "Services" includes all code, documentation, tests, and technical assets created in connection with the project as defined above. Any back-end infrastructure, third-party integrations, or hosting setup not listed above is explicitly out of scope and subject to separate agreement.</p>';
+  if (ctx.isCreative) scopeNotes = '<p>Deliverables shall be provided in the file formats specified at kickoff. Source files (e.g. .AI, .PSD, .FIGMA) shall be delivered upon receipt of final payment. Preliminary concepts and works-in-progress remain the property of Service Provider until final payment is received.</p>';
+  if (ctx.isMarketing) scopeNotes = '<p>Performance outcomes (reach, conversions, ROI) are not guaranteed and are not part of the scope of this Agreement. Service Provider guarantees only the delivery of the specified services and content.</p>';
+
+  return `<h2>Freelance Service Agreement</h2>
+<p class="doc-meta">This Freelance Service Agreement (this "Agreement") is entered into as of <strong>${today()}</strong>, between <strong>${d.freelancer||'[Service Provider]'}</strong> ("Service Provider") and <strong>${d.client||'[Client]'}</strong> ("Client").</p>
+
+<div class="clause-head">1. Scope of Services</div>
+<p>Service Provider agrees to perform the following services for Client: <strong>${d.services||'[Services]'}</strong> (the "Services"). The project shall be completed by <strong>${deadlineText}</strong>. Any additional work, features, or deliverables not expressly listed above are out of scope and shall require a written change order with agreed-upon additional compensation before work begins.</p>
+${scopeNotes}
+
+<div class="clause-head">2. Compensation</div>
+<p>Client agrees to pay Service Provider <strong>${d.rate||'[Rate]'}</strong> for the Services described above. Payment schedule: <strong>${d.terms||'[Payment Terms]'}</strong>. Invoices shall be issued according to this schedule and are due within 7 days of receipt. Invoices unpaid after 15 days shall accrue interest at 1.5% per month (18% per annum). Service Provider reserves the right to suspend work on unpaid balances.</p>
+
+<div class="clause-head">3. Revisions</div>
+<p>This Agreement includes <strong>${revText}</strong> of revisions. A "revision" means changes within the originally agreed scope. Requests for new features, fundamental design changes, or additional deliverables beyond the scope above are not revisions and will be quoted separately. Additional rounds beyond those included shall be billed at Service Provider's standard hourly rate.</p>
+
+<div class="redacted">
+<div class="clause-head">4. Intellectual Property Ownership</div>
+<p>Upon receipt of full and final payment, all work product, deliverables, and materials created specifically for Client under this Agreement shall become the sole and exclusive property of Client ("Work Made for Hire" where applicable under 17 U.S.C. § 101, and by assignment for all other works). Prior to receipt of full payment, Service Provider retains all rights, title, and interest in and to the work product. Service Provider retains the right to display the project in their portfolio.</p>
+<p>Service Provider's pre-existing tools, frameworks, libraries, templates, and proprietary processes ("Background IP") remain the exclusive property of Service Provider. To the extent Background IP is incorporated into deliverables, Service Provider grants Client a non-exclusive, perpetual license to use such Background IP solely as incorporated in the deliverables.</p>
+
+<div class="clause-head">5. Kill Fee</div>
+<p>If Client cancels this project after work has commenced, the following kill fee applies: cancellation in Phase 1 — retain initial deposit; cancellation in Phase 2 — 50% of remaining contract value; cancellation after substantial completion — 75% of contract value. Any work completed to date shall be delivered to Client upon payment of the applicable kill fee.</p>
+
+<div class="clause-head">6. Independent Contractor Status</div>
+<p>Service Provider is an independent contractor. Nothing in this Agreement creates an employer-employee relationship, partnership, or joint venture. Service Provider is solely responsible for all taxes, insurance, and business expenses. Service Provider may perform services for other clients during the term of this Agreement, provided such work does not conflict with this engagement.</p>
+
+<div class="clause-head">7. Confidentiality</div>
+<p>Service Provider agrees to keep all non-public information of Client confidential and to use such information solely for the purpose of performing the Services. This obligation survives termination of this Agreement.</p>
+
+<div class="clause-head">8. Limitation of Liability</div>
+<p>Service Provider's total liability under this Agreement shall not exceed the total fees paid by Client. In no event shall either party be liable for indirect, incidental, or consequential damages.</p>
+
+<div class="clause-head">9. Governing Law</div>
+<p>This Agreement shall be governed by the laws of the State of <strong>${d.state||'[State]'}</strong>. Disputes shall be resolved in the courts of <strong>${d.state||'[State]'}</strong>.</p>
+
+<div class="clause-head">10. Signatures</div>
+<p>The Parties agree to the terms above.</p>
+<p style="margin-top:28px">Signed: ___________________________ &nbsp;&nbsp; Date: ___________<br/><strong>${d.freelancer||'Service Provider'}</strong></p>
+<p style="margin-top:20px">Signed: ___________________________ &nbsp;&nbsp; Date: ___________<br/><strong>${d.client||'Client'}</strong></p>
+</div>`;
+}
+
+function buildLease(d) {
+  const petClause = d.pets && d.pets.toLowerCase() !== 'no pets'
+    ? `<p>Pets: <strong>${d.pets}</strong>. Tenant agrees to maintain any pet(s) in compliance with applicable laws and to be liable for any damages caused by pet(s). A pet deposit of one month's rent may be required separately.</p>`
+    : '<p><strong>No pets</strong> are permitted on the Premises without prior written consent of Landlord.</p>';
+
+  const propType = d.type ? ` ${d.type}` : ' residential property';
+
+  return `<h2>Residential Lease Agreement</h2>
+<p class="doc-meta">This Residential Lease Agreement ("Lease") is entered into as of <strong>${today()}</strong>, between <strong>${d.landlord||'[Landlord]'}</strong> ("Landlord") and <strong>${d.tenant||'[Tenant]'}</strong> ("Tenant"). This Lease is governed by the laws of the state where the Premises are located.</p>
+
+<div class="clause-head">1. Premises and Permitted Use</div>
+<p>Landlord hereby leases to Tenant the${propType} located at <strong>${d.address||'[Address]'}</strong> (the "Premises"), for use as a private residence only. Tenant shall not use the Premises for any business, commercial, or illegal purpose without prior written consent.</p>
+
+<div class="clause-head">2. Lease Term</div>
+<p>The lease term commences on <strong>${d.start||'[Start Date]'}</strong> and continues for <strong>${d.term||'[Term]'}</strong>, terminating automatically at the end of the term unless renewed in writing. If Tenant holds over after the term expires without a written renewal, tenancy converts to a month-to-month arrangement with 30 days' written notice required for termination by either party.</p>
+
+<div class="clause-head">3. Rent and Payment Terms</div>
+<p>Tenant shall pay <strong>$${d.rent||'[Amount]'} per month</strong>, due on the 1st of each month. Rent received after the 5th of the month shall incur a late fee of $75. Returned checks shall incur a $35 fee. Rent shall be paid by [method to be specified at signing] to Landlord at the address provided.</p>
+
+<div class="redacted">
+<div class="clause-head">4. Security Deposit</div>
+<p>Upon execution of this Lease, Tenant shall pay a security deposit of <strong>$${d.deposit||'[Amount]'}</strong>. The deposit shall be held in a separate account and returned within 30 days following Tenant's move-out date, less any documented deductions for unpaid rent, damages beyond normal wear and tear, or cleaning costs. Landlord shall provide an itemized written statement of any deductions.</p>
+
+<div class="clause-head">5. Maintenance and Repairs</div>
+<p>Landlord shall maintain the Premises in habitable condition and shall be responsible for structural repairs and systems (plumbing, electrical, HVAC). Tenant shall maintain the Premises in clean and sanitary condition, shall promptly notify Landlord of any damage or needed repairs, and shall be responsible for damages beyond normal wear and tear, including those caused by Tenant, guests, or pets.</p>
+
+<div class="clause-head">6. Pet Policy</div>
+${petClause}
+
+<div class="clause-head">7. Subletting and Assignment</div>
+<p>Tenant may not sublet the Premises or assign this Lease, in whole or in part, without prior written consent of Landlord. Unauthorized subletting is grounds for termination of this Lease.</p>
+
+<div class="clause-head">8. Entry by Landlord</div>
+<p>Landlord may enter the Premises with 24 hours' prior written notice for inspection, repairs, or showing the property. Entry without notice is permitted only in emergency situations.</p>
+
+<div class="clause-head">9. Early Termination</div>
+<p>If Tenant vacates before the end of the lease term, Tenant shall remain responsible for all rent obligations until a qualified replacement tenant begins tenancy, or the lease term ends — whichever comes first. Landlord shall make reasonable efforts to mitigate damages by re-letting the Premises.</p>
+
+<div class="clause-head">10. Signatures</div>
+<p style="margin-top:28px">Landlord: ___________________________ &nbsp;&nbsp; Date: ___________<br/><strong>${d.landlord||'Landlord'}</strong></p>
+<p style="margin-top:20px">Tenant: ___________________________ &nbsp;&nbsp; Date: ___________<br/><strong>${d.tenant||'Tenant'}</strong></p>
+</div>`;
+}
+
+function buildLLC(d) {
+  const memberList = d.members || '[Member names and ownership percentages]';
+  const profitSchedule = d.profits || 'annually';
+
+  return `<h2>LLC Operating Agreement</h2>
+<p class="doc-meta">This Operating Agreement (this "Agreement") is entered into as of <strong>${today()}</strong>, by and among the members listed below (the "Members"), for the purpose of governing the operations of <strong>${d.llc_name||'[LLC Name]'}</strong>, a limited liability company organized under the laws of the State of <strong>${d.state||'[State]'}</strong>.</p>
+
+<div class="clause-head">1. Formation and Name</div>
+<p>The Members hereby form a limited liability company under the name <strong>${d.llc_name||'[LLC Name]'}</strong> pursuant to the LLC Act of <strong>${d.state||'[State]'}</strong>. The Company's primary purpose is: <strong>${d.purpose||'[Business Purpose]'}</strong>. The Company may engage in any lawful activity ancillary to this purpose.</p>
+
+<div class="clause-head">2. Members and Ownership</div>
+<p>The following Members hold ownership interests in the Company: <strong>${memberList}</strong>. Ownership percentages determine each Member's share of profits, losses, and voting power unless otherwise specified herein.</p>
+
+<div class="clause-head">3. Management Structure</div>
+<p>The Company shall be <strong>member-managed</strong>. The designated Managing Member is <strong>${d.manager||'[Managing Member]'}</strong>, who shall have authority to execute contracts, open bank accounts, and conduct ordinary business on behalf of the Company. Major decisions — including incurring debt over $[threshold], adding new members, or dissolving the Company — require approval by Members holding a majority of ownership interests.</p>
+
+<div class="redacted">
+<div class="clause-head">4. Capital Contributions</div>
+<p>Each Member's initial capital contribution shall be agreed upon and documented in Schedule A attached hereto. No Member shall be required to make additional capital contributions without unanimous consent. Members are not personally liable for Company debts beyond their capital contributions.</p>
+
+<div class="clause-head">5. Profit and Loss Distribution</div>
+<p>Profits and losses of the Company shall be allocated among Members in proportion to their respective ownership percentages, unless otherwise agreed in writing. Distributions shall be made <strong>${profitSchedule}</strong>, at the discretion of the Managing Member, provided the Company maintains sufficient operating reserves. Distributions shall not be made if doing so would render the Company unable to pay its debts as they come due.</p>
+
+<div class="clause-head">6. Transfer of Membership Interests</div>
+<p>No Member may transfer, sell, pledge, or otherwise dispose of their ownership interest without first offering the other Members a right of first refusal at the proposed transfer price. Any transfer not in compliance with this section is void. The addition of a new member requires unanimous approval of existing Members.</p>
+
+<div class="clause-head">7. Member Departure and Buyout</div>
+<p>If a Member wishes to withdraw, they shall provide 60 days' written notice. The remaining Members shall have the right to purchase the departing Member's interest at fair market value, determined by a mutually agreed-upon valuation or independent appraisal. Death or incapacity of a Member triggers the same buyout right.</p>
+
+<div class="clause-head">8. Dissolution</div>
+<p>The Company may be dissolved upon unanimous written consent of all Members, court order, or as required by state law. Upon dissolution, Company assets shall be liquidated and distributed in the following order: (i) payment of Company debts and liabilities; (ii) return of capital contributions; (iii) distribution of remaining assets pro rata to Members per ownership percentage.</p>
+
+<div class="clause-head">9. Signatures</div>
+<p>Each undersigned Member agrees to the terms of this Operating Agreement.</p>
+<p style="margin-top:28px">___________________________ &nbsp;&nbsp; Date: ___________<br/><strong>Managing Member: ${d.manager||'[Managing Member]'}</strong></p>
+<p style="margin-top:20px">___________________________ &nbsp;&nbsp; Date: ___________<br/><strong>Member: [Additional Member]</strong></p>
+</div>`;
+}
+
+function buildContractor(d) {
+  const ctx = inferContext(d);
+  const ipOwner = d.ip || 'Client owns everything on full payment';
+  const ipClause = /contractor retain|contractor keep|service provider/i.test(ipOwner)
+    ? '<p>Service Provider retains all rights, title, and interest in and to all work product until receipt of full payment, at which time ownership transfers to Company per Section 3.</p>'
+    : '<p>All work product, deliverables, and materials created under this Agreement are "work made for hire" and shall be the sole property of Company upon creation. Where "work made for hire" status is not available by law, Contractor hereby assigns all rights to Company upon payment in full.</p>';
+
+  return `<h2>Independent Contractor Agreement</h2>
+<p class="doc-meta">This Independent Contractor Agreement ("Agreement") is entered into as of <strong>${today()}</strong>, between <strong>${d.company||'[Company]'}</strong> ("Company") and <strong>${d.contractor||'[Contractor]'}</strong> ("Contractor").</p>
+
+<div class="clause-head">1. Services</div>
+<p>Contractor agrees to perform the following services for Company: <strong>${d.work||'[Work Description]'}</strong>. The project shall be completed within <strong>${d.timeline||'[Timeline]'}</strong> of the Agreement date. Any additional scope requires a written amendment signed by both parties.</p>
+
+<div class="clause-head">2. Compensation</div>
+<p>Company agrees to pay Contractor <strong>${d.pay||'[Compensation]'}</strong> for the above services. Payment shall be made within 10 business days of invoice submission or milestone completion, as applicable. Late payments shall accrue interest at 1.5% per month.</p>
+
+<div class="clause-head">3. Intellectual Property</div>
+${ipClause}
+
+<div class="redacted">
+<div class="clause-head">4. Independent Contractor Classification</div>
+<p>Contractor is an independent contractor and not an employee, partner, or agent of Company. Contractor shall be solely responsible for all federal, state, and local taxes on compensation received, including self-employment taxes. Company shall not withhold taxes or provide benefits. Contractor retains the right to perform services for other clients, provided there is no conflict of interest with this engagement.</p>
+
+<div class="clause-head">5. Confidentiality</div>
+<p>Contractor shall keep all non-public information of Company strictly confidential and shall not disclose it to any third party without Company's prior written consent. Contractor shall use Confidential Information solely to perform the Services. This obligation survives termination of this Agreement for 3 years, and indefinitely as to trade secrets.</p>
+
+<div class="clause-head">6. Non-Solicitation</div>
+<p>For a period of 12 months following termination of this Agreement, Contractor shall not solicit or hire any employee or contractor of Company with whom Contractor had contact during this engagement.</p>
+
+<div class="clause-head">7. Termination</div>
+<p>Either party may terminate this Agreement with 14 days' written notice. Company may terminate immediately for cause (material breach, fraud, or misconduct). Upon termination, Contractor shall deliver all completed work product and Company shall pay for all work completed to the termination date.</p>
+
+<div class="clause-head">8. Governing Law</div>
+<p>This Agreement is governed by the laws of the State of <strong>${d.state||'[State]'}</strong>.</p>
+
+<div class="clause-head">9. Signatures</div>
+<p style="margin-top:28px">___________________________ &nbsp;&nbsp; Date: ___________<br/><strong>${d.company||'Company'}</strong></p>
+<p style="margin-top:20px">___________________________ &nbsp;&nbsp; Date: ___________<br/><strong>${d.contractor||'Contractor'}</strong></p>
+</div>`;
+}
+
+function buildBrandCollab(d) {
+  const exclusivityClause = d.exclusivity && !/no exclu/i.test(d.exclusivity)
+    ? `<p>During the campaign period and for <strong>${d.exclusivity}</strong> thereafter, Creator shall not create sponsored content for direct competitors of Brand in the same product category without Brand's prior written consent. For purposes of this Agreement, a "direct competitor" means [to be defined by parties at signing].</p>`
+    : '<p>This Agreement does not include an exclusivity restriction. Creator may create content for other brands, including brands in similar categories.</p>';
+
+  const ftcClause = '<p>Creator shall clearly and conspicuously disclose the material connection to Brand in all content, in compliance with FTC Guidelines (16 C.F.R. Part 255), using language such as "#ad," "#sponsored," or "Paid partnership with [Brand]." Creator acknowledges that failure to disclose may expose both parties to regulatory liability.</p>';
+
+  return `<h2>Brand Collaboration Agreement</h2>
+<p class="doc-meta">This Brand Collaboration Agreement ("Agreement") is entered into as of <strong>${today()}</strong>, between <strong>${d.creator||'[Creator]'}</strong> ("Creator") and <strong>${d.brand||'[Brand]'}</strong> ("Brand").</p>
+
+<div class="clause-head">1. Deliverables</div>
+<p>Creator agrees to produce and deliver the following content: <strong>${d.deliverables||'[Deliverables]'}</strong>. All content shall be delivered in Brand's requested format within the timeline agreed at kickoff. Content shall be original, created by Creator, and shall not infringe any third-party intellectual property rights.</p>
+
+<div class="clause-head">2. Usage Rights</div>
+<p>Creator grants Brand a <strong>non-exclusive</strong> license to use, reproduce, and display the delivered content as follows: <strong>${d.usage||'[Usage Rights]'}</strong>. Any use beyond this scope — including repurposing for other platforms, paid advertising, or use beyond the licensed term — requires a separate written agreement and additional compensation.</p>
+
+<div class="clause-head">3. FTC Disclosure</div>
+${ftcClause}
+
+<div class="redacted">
+<div class="clause-head">4. Compensation</div>
+<p>Brand agrees to pay Creator <strong>${d.rate||'[Fee]'}</strong>. Payment schedule: <strong>${d.payment||'[Payment Terms]'}</strong>. Late payments after 30 days accrue interest at 1.5% per month. Creator shall issue an invoice upon final delivery.</p>
+
+<div class="clause-head">5. Revisions and Approval</div>
+<p>Brand shall have the right to request <strong>${d.revisions||'2'} rounds of revisions</strong> within 5 business days of delivery. A "revision" means changes within the original creative brief. Fundamental concept changes constitute new deliverables and may require additional compensation. Brand approval of final content shall not be unreasonably withheld.</p>
+
+<div class="clause-head">6. Exclusivity</div>
+${exclusivityClause}
+
+<div class="clause-head">7. Kill Fee</div>
+<p>If Brand cancels this Agreement after Creator has commenced production, Brand shall pay Creator a kill fee of 50% of the total fee if cancelled before first delivery, and 75% if cancelled after first delivery. If Brand rejects all delivered content without basis, the full fee is due.</p>
+
+<div class="clause-head">8. Creator Independence</div>
+<p>Creator is an independent contractor. Creator retains creative control over content style, voice, and execution, subject to Brand's brief and approval rights above. Nothing in this Agreement creates an employment relationship.</p>
+
+<div class="clause-head">9. Governing Law</div>
+<p>Governed by the laws of the State of <strong>${d.state||'California'}</strong>.</p>
+
+<div class="clause-head">10. Signatures</div>
+<p style="margin-top:28px">___________________________ &nbsp;&nbsp; Date: ___________<br/><strong>${d.creator||'Creator'}</strong></p>
+<p style="margin-top:20px">___________________________ &nbsp;&nbsp; Date: ___________<br/><strong>${d.brand||'Brand'}</strong></p>
+</div>`;
+}
+
+function buildWebsiteDev(d) {
+  return `<h2>Website Development Contract</h2>
+<p class="doc-meta">This Website Development Contract ("Agreement") is entered into as of <strong>${today()}</strong>, between <strong>${d.developer||'[Developer]'}</strong> ("Developer") and <strong>${d.client||'[Client]'}</strong> ("Client").</p>
+
+<div class="clause-head">1. Project Scope</div>
+<p>Developer agrees to design and develop the following: <strong>${d.scope||'[Project Scope]'}</strong>, built on <strong>${d.stack||'[Platform/Tech Stack]'}</strong>. The project shall be delivered within <strong>${d.timeline||'[Timeline]'}</strong> of project kickoff. Work not explicitly described above is out of scope and subject to a separate written change order.</p>
+<p>Out-of-scope examples include, without limitation: e-commerce functionality, third-party integrations, custom database build, ongoing SEO, and content writing — unless listed above.</p>
+
+<div class="clause-head">2. Payment Milestones</div>
+<p>Client agrees to pay Developer a total fee of <strong>${d.rate||'[Total Fee]'}</strong>, payable as follows: <strong>${d.milestones||'[Milestone Schedule]'}</strong>. Each milestone payment is due within 5 business days of the milestone trigger. Work on each subsequent phase will not commence until the prior milestone payment is received. Late payments accrue interest at 1.5% per month.</p>
+
+<div class="clause-head">3. Revisions</div>
+<p>This Agreement includes <strong>${d.revisions||'2 design revisions and 1 development revision'}</strong>. Revisions must be submitted in writing as a consolidated list. Additional revision rounds shall be billed at Developer's standard hourly rate. A "revision" is a change within the original agreed design/scope — not a new concept or feature.</p>
+
+<div class="redacted">
+<div class="clause-head">4. Intellectual Property</div>
+<p>Upon receipt of full and final payment, Client shall own all custom design elements and code created specifically for this project. Developer retains ownership of all proprietary frameworks, tools, plugins, libraries, and reusable components ("Developer IP") which are incorporated under a non-exclusive perpetual license to Client for use in the delivered project only. Third-party assets (stock photos, premium plugins, fonts) are subject to their respective licenses, which Client is responsible for maintaining.</p>
+
+<div class="clause-head">5. Client Responsibilities</div>
+<p>Client shall provide all content (text, images, brand assets, login credentials) required for the project within 5 business days of the agreed kickoff date. Delays in content delivery extend the project timeline by an equivalent period. Client is responsible for reviewing and approving each phase within 5 business days; failure to respond constitutes approval.</p>
+
+<div class="clause-head">6. Hosting and Post-Launch</div>
+<p>${d.hosting || 'Client is responsible for arranging and maintaining hosting after launch. Developer shall provide a 30-day bug-fix warranty post-launch covering functionality errors in delivered code. Warranty does not cover changes to content, third-party plugin updates, or new feature requests.'}</p>
+
+<div class="clause-head">7. Kill Fee</div>
+<p>If Client terminates this project after work has commenced: Phase 1 cancellation — retain deposit; Phase 2 cancellation — 50% of contract; After substantial completion — 75% of contract. Developer retains all work product until kill fee is paid.</p>
+
+<div class="clause-head">8. Governing Law</div>
+<p>Governed by the laws of the State of <strong>${d.state||'[State]'}</strong>.</p>
+
+<div class="clause-head">9. Signatures</div>
+<p style="margin-top:28px">___________________________ &nbsp;&nbsp; Date: ___________<br/><strong>${d.developer||'Developer'}</strong></p>
+<p style="margin-top:20px">___________________________ &nbsp;&nbsp; Date: ___________<br/><strong>${d.client||'Client'}</strong></p>
+</div>`;
+}
+
+function buildGeneric(doc, d) {
+  const ctx = inferContext(d);
+  const fieldSummary = Object.entries(d)
+    .filter(([k]) => k !== 'email')
+    .map(([k, v]) => v ? `<p><strong>${k.replace(/_/g,' ')}:</strong> ${v}</p>` : '')
+    .join('');
+
+  return `<h2>${doc.name}</h2>
+<p class="doc-meta">Prepared as of <strong>${today()}</strong>.</p>
+<p>This ${doc.name} is entered into between the parties described below, incorporating the following specific terms:</p>
+${fieldSummary}
+<div class="clause-head">Standard Terms and Provisions</div>
+<p>This agreement incorporates all standard legal clauses required for a binding ${doc.name}, including representations and warranties, limitation of liability, indemnification, dispute resolution, and governing law.</p>
+<div class="redacted">
+<div class="clause-head">Specific Legal Provisions</div>
+<p>The complete document contains all jurisdiction-specific clauses, detailed obligations, remedy provisions, and signature blocks tailored to the information you provided above.</p>
+<div class="clause-head">Governing Law and Signatures</div>
+<p>This agreement is governed by applicable state law as specified above. Signatures of all parties below constitute binding acceptance of all terms.</p>
+<p style="margin-top:28px">Party 1: ___________________________ &nbsp;&nbsp; Date: ___________</p>
+<p style="margin-top:20px">Party 2: ___________________________ &nbsp;&nbsp; Date: ___________</p>
+</div>`;
+}
+
+// ─── MASTER PREVIEW ROUTER ───────────────────────────────────────
+function buildPreview(doc, data) {
+  const d = data;
+  switch(doc.id) {
+    case 'nda':         return buildNDA(d);
+    case 'freelance':   return buildFreelance(d);
+    case 'lease':       return buildLease(d);
+    case 'llc':         return buildLLC(d);
+    case 'contractor':  return buildContractor(d);
+    case 'brand_collab': return buildBrandCollab(d);
+    case 'website_dev': return buildWebsiteDev(d);
+    default:            return buildGeneric(doc, d);
+  }
+}
+
+// ─── UI FUNCTIONS ─────────────────────────────────────────────────
+function openForm(docId) {
+  currentDoc = DOCS.find(d => d.id === docId);
+  if (!currentDoc) return;
+  document.getElementById('formModalTitle').textContent = currentDoc.name;
+  const body = document.getElementById('formModalBody');
+  body.innerHTML = `
+    <div class="form-doc-badge sans">${currentDoc.icon} &nbsp;${currentDoc.cat}</div>
+    <p class="form-doc-desc sans">${currentDoc.desc}</p>
+    ${currentDoc.fields.map(f => `
+      <div class="form-field">
+        <label class="form-label sans">${f.label}</label>
+        <input class="form-input sans" id="fi-${f.id}" type="text" placeholder="${f.ph}" autocomplete="off">
+      </div>`).join('')}
+    <div class="form-field">
+      <label class="form-label sans">Email — to receive your document link</label>
+      <input class="form-input sans" id="fi-email" type="email" placeholder="you@example.com">
+    </div>`;
+  document.getElementById('formOverlay').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeForm() {
+  document.getElementById('formOverlay').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+function startGenerate() {
+  const doc = currentDoc;
+  const data = {};
+  doc.fields.forEach(f => { data[f.id] = document.getElementById(`fi-${f.id}`)?.value.trim() || ''; });
+  data.email = document.getElementById('fi-email')?.value.trim() || '';
+  if (!data.email || !data.email.includes('@')) {
+    const el = document.getElementById('fi-email');
+    el.focus(); el.style.borderColor = '#dc2626';
+    setTimeout(() => el.style.borderColor = '', 2000);
+    return;
+  }
+  currentFormData = data;
+  closeForm();
+
+  const overlay = document.getElementById('genOverlay');
+  const bar     = document.getElementById('genBar');
+  const status  = document.getElementById('genStatus');
+  overlay.classList.add('active');
+
+  // Context-aware status messages
+  const ctx = inferContext(data);
+  const msgs = ctx.isTech
+    ? ['Analyzing technical scope...','Applying IP and source code provisions...','Customizing liability clauses...','Formatting jurisdiction-specific terms...','Preparing your preview...']
+    : ctx.isCreative
+    ? ['Reviewing deliverables and creative scope...','Applying usage rights framework...','Customizing revision and kill fee clauses...','Formatting your agreement...','Preparing your preview...']
+    : ctx.isRealEstate
+    ? ['Reviewing property details...','Applying state landlord-tenant law...','Customizing deposit and maintenance terms...','Formatting lease provisions...','Preparing your preview...']
+    : ['Analyzing parties and purpose...','Applying governing state law...','Customizing clause language to your situation...','Formatting final document...','Preparing your preview...'];
+
+  let i = 0, pct = 0;
+  const iv = setInterval(() => {
+    pct += 20; bar.style.width = pct + '%';
+    if (i < msgs.length) { status.textContent = msgs[i]; i++; }
+    if (pct >= 100) clearInterval(iv);
+  }, 900);
+
+  setTimeout(() => {
+    overlay.classList.remove('active');
+    bar.style.width = '0';
+    showPreview(doc, data);
+  }, 5000);
+
+  captureEmail(data.email, doc.name);
+}
+
+function showPreview(doc, data) {
+  document.getElementById('previewLabel').textContent = doc.name;
+  document.getElementById('previewBody').innerHTML = buildPreview(doc, data);
+  document.getElementById('previewOverlay').classList.add('active');
+  document.body.style.overflow = 'hidden';
+  document.getElementById('previewOverlay').scrollTop = 0;
+}
+
+function closePreview() {
+  document.getElementById('previewOverlay').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+function goToPay() {
+  // Route to the right product based on current doc
+  const routeMap = {
+    'brand_collab': STRIPE_CREATOR,
+    'website_dev':  STRIPE_FREELANCER,
+    'llc':          STRIPE_LLC_KIT,
+    'consulting':   STRIPE_FREELANCER,
+    'contractor':   STRIPE_FREELANCER,
+    'freelance':    STRIPE_FREELANCER,
+  };
+  const url = (currentDoc && routeMap[currentDoc.id]) || STRIPE_SINGLE;
+  closePreview();
+  window.open(url, '_blank');
+}
+
+function captureEmail(email, docName) {
+  fetch('/api/lead', {
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body: JSON.stringify({email, doc: docName})
+  }).catch(() => {});
+}
+
+// ─── RENDER DOC GRID ON LOAD ─────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  const grid = document.getElementById('doc-grid');
+  if (grid) {
+    grid.innerHTML = DOCS.map(doc => `
+      <div class="doc-card" onclick="openForm('${doc.id}')">
+        <div class="doc-card-icon">${doc.icon}</div>
+        <div class="doc-card-cat sans">${doc.cat}</div>
+        <div class="doc-card-name">${doc.name}</div>
+        <p class="doc-card-desc sans">${doc.desc.substring(0,90)}...</p>
+        <div class="doc-card-cta sans">Preview free &rarr;</div>
+      </div>`).join('');
+  }
+
+  // Reveal animations
+  const reveals = document.querySelectorAll('[data-reveal]');
+  if ('IntersectionObserver' in window) {
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); obs.unobserve(e.target); }});
+    }, {threshold: 0.1});
+    reveals.forEach(el => obs.observe(el));
+  } else {
+    reveals.forEach(el => el.classList.add('revealed'));
+  }
+});
+
+</script>
+</body>
+</html>
