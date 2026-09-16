@@ -1,0 +1,30 @@
+{
+  "business": "LexDraft",
+  "offer": "AI-assisted contract generation and analysis priced per document, with potential business and team adoption.",
+  "targetOutcome": "Paid document usage, repeat customers, team accounts and B2B pilots.",
+  "strikeSignals": [
+    "frequent contract workflows",
+    "small legal team",
+    "startup fundraising",
+    "sales team scaling",
+    "procurement growth",
+    "template-heavy legal work",
+    "outside counsel cost pressure",
+    "new operations or legal hire"
+  ],
+  "icp": [
+    "startups",
+    "SMBs",
+    "agencies",
+    "consultancies",
+    "recruiting firms",
+    "property businesses",
+    "operations teams",
+    "legal-adjacent professionals"
+  ],
+  "exclude": [
+    "prospects requiring unauthorized legal representation",
+    "organizations with no recurring document workflow"
+  ],
+  "cta": "Offer a low-friction paid document test or team pilot tied to a specific contract workflow."
+}
